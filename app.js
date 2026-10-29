@@ -26,14 +26,14 @@ async function ensureViewer(show){stage.classList.toggle('on',!!show);if(!show)r
 function bar(html){vbar.innerHTML=html}
 // ---------- 页面 ----------
 const P={};
-P.dash=()=>{main.innerHTML=`<h2>工作台</h2><div class="sub">今日概览</div>
+P.dash=()=>{main.innerHTML=`<div class="mhero"><img src="lib_cup_shengli_13p8_v3_mudan_02.png"><div class="mh-t">醴陵釉下五彩 · AI 纹样定制</div><div class="mh-s">选器型、生成纹样、3D 确稿、工艺校验、一键出花纸稿，单件打样不再反复试烧</div><button class="btn p mh-b" id="mb">开始定制 →</button></div><h2>工作台</h2><div class="sub">今日概览</div>
  <div class="grid g4">${[['近期定制单','3 单'],['标准器型','3 款'],['纹样库','5 题材 · 20 款'],['工艺校验规则','3 项']].map(([a,b])=>`<div class="card kpi"><span>${a}</span><b>${b}</b></div>`).join('')}</div>
  <div class="grid g2"><div class="card"><b>打样周期对比</b><p class="note">传统：微信改稿 + 实物打样，每轮 400–2000 元、7–15 天（公开报价）<br>平台：在线 3D 确稿 + 工艺校验后出花纸稿，目标实物打样压到一次（设计目标，非实测）</p>
  <div class="row"><span style="width:60px" class="note">传统</span><div class="prog" style="flex:1;height:14px"><i style="width:100%;background:#c9bfb2"></i></div><span class="note">7–15 天</span></div>
  <div class="row" style="margin-top:8px"><span style="width:60px" class="note">平台</span><div class="prog" style="flex:1;height:14px"><i style="width:12%"></i></div><span class="note">1–2 天</span></div></div>
  <div class="card"><b>待处理</b><table style="margin-top:8px"><tr><td>${ORDER.no}</td><td>${ORDER.customer}</td><td>胜利杯 × ${ORDER.qty}</td><td><span class="tag warn">待设计</span></td></tr>
  <tr><td>DZ-20261029-0016</td><td>长沙某银行</td><td>毛瓷碗 × 300</td><td><span class="tag ok">生产中</span></td></tr><tr><td>DZ-20261027-0011</td><td>株洲某科技公司</td><td>凤尾尊 × 20</td><td><span class="tag">已发货</span></td></tr></table>
- <div class="row" style="margin-top:12px"><button class="btn p" id="b">处理 ${ORDER.no} →</button></div></div></div>`;$('#b').onclick=()=>next('order')};
+ <div class="row" style="margin-top:12px"><button class="btn p" id="b">处理 ${ORDER.no} →</button></div></div></div>`;$('#b').onclick=()=>next('order');$('#mb').onclick=()=>next('order')};
 P.order=()=>{main.innerHTML=`<h2>订单需求</h2><div class="sub">客户在微信/电话里提的需求，录入为结构化定制单</div>
  <div class="card"><table><tr><th>定制单号</th><td>${ORDER.no}</td></tr><tr><th>客户</th><td>${ORDER.customer}（${ORDER.contact}）</td></tr><tr><th>产品</th><td>${ORDER.product}</td></tr><tr><th>数量</th><td>${ORDER.qty} 只</td></tr><tr><th>期望交期</th><td>${ORDER.due}</td></tr><tr><th>题材偏好</th><td>${ORDER.theme}</td></tr><tr><th>需求描述</th><td>${ORDER.brief}</td></tr><tr><th>工艺</th><td>釉下五彩 · 釉下小膜花纸贴花 + 手工分水补色</td></tr></table></div>
  <button class="btn p" id="b">开始设计 →</button>`;$('#b').onclick=()=>next('vessel')};
