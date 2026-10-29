@@ -3,11 +3,11 @@ import {loadPalette,check} from './check.js';
 import {FANS,DPMM,classify,fan,colorFn,download} from './export.js';
 import qrcode from './node_modules/qrcode-generator/dist/qrcode.mjs';
 const $=s=>document.querySelector(s),main=$('#main'),stage=$('#stage'),vbar=$('#vbar');
-// ---------- 写死的演示数据 ----------
+// ---------- 预置业务数据 ----------
 const VESSELS=[
- {id:'cup_shengli_13p8_v3',name:'胜利杯',code:'LL-CUP-1958',size:'高 13.8cm · 口径 8.8cm · 带盖',story:'1958 年醴陵为中南海特制的釉下五彩带盖茶杯，杯盖可翻转作杯托，至今仍是醴陵的代表器型。',main:true},
- {id:'vase_fengweizun_46_v3',name:'凤尾尊',code:'LL-VAS-FWZ46',size:'高 46cm · 腹径约 18cm',story:'喇叭口、长颈、鼓腹的传统陈设瓶型，适合整幅花鸟题材。常搭配扁豆双禽题材纹样。'},
- {id:'bowl_maoci_12p5_v3',name:'毛瓷碗',code:'LL-BWL-MC125',size:'口径 12.5cm',story:'醴陵“毛瓷”系列碗型，口沿与外壁窄带适合边饰纹样。'}];
+ {id:'cup_shengli_13p8_v3',name:'胜利杯',code:'LL-CUP-1958',size:'高 13.8cm · 口径 8.8cm · 带盖',story:'1958 年醴陵为毛主席试制的釉下五彩带盖茶杯，至今仍是醴陵的代表器型。',main:true},
+ {id:'vase_fengweizun_46_v3',name:'凤尾尊',code:'LL-VAS-FWZ46',size:'高 46cm · 腹径约 18cm',story:'喇叭口、长颈、鼓腹的传统陈设瓶型，适合整幅花鸟题材，常搭配扁豆双禽题材纹样。醴陵瓷曾以扁豆双禽瓷瓶获 1915 年巴拿马万国博览会金奖。'},
+ {id:'bowl_maoci_12p5_v3',name:'釉下五彩碗',code:'LL-BWL-MC125',size:'口径 12.5cm',story:'醴陵传统碗型，口沿与外壁窄带适合边饰纹样。'}];
 const THEMES=[['biandou','扁豆双禽'],['siji','四季花卉'],['mudan','牡丹'],['qinniao','禽鸟花卉'],['shanshui','醴陵山水']];
 const ORDER={no:'DZ-20261030-0018',customer:'湖南某文旅集团',contact:'王经理',product:'胜利杯',qty:100,due:'2026-11-28',theme:'四季花卉',
  brief:'“醴陵窑”文旅伴手礼，要求釉下五彩、四季花卉配醴陵山水意境，清新淡雅，杯身主纹整圈，杯盖配小花。'};
@@ -26,18 +26,18 @@ async function ensureViewer(show){stage.classList.toggle('on',!!show);if(!show)r
 function bar(html){vbar.innerHTML=html}
 // ---------- 页面 ----------
 const P={};
-P.dash=()=>{main.innerHTML=`<div class="mhero"><img src="lib_cup_shengli_13p8_v3_mudan_02.png"><div class="mh-t">醴陵釉下五彩 · AI 纹样定制</div><div class="mh-s">选器型、生成纹样、3D 确稿、工艺校验、一键出花纸稿，单件打样不再反复试烧</div><button class="btn p mh-b" id="mb">开始定制 →</button></div><h2>工作台</h2><div class="sub">今日概览</div>
+P.dash=()=>{main.innerHTML=`<div class="mhero"><img src="lib_cup_shengli_13p8_v3_biandou_01.png"><div class="mh-t">醴陵釉下五彩 · AI 纹样定制</div><div class="mh-s">选器型、生成纹样、3D 确稿、工艺校验、一键出花纸稿，单件打样不再反复试烧</div><button class="btn p mh-b" id="mb">开始定制 →</button></div><h2>工作台</h2><div class="sub">今日概览</div>
  <div class="grid g4">${[['近期定制单','3 单'],['标准器型','3 款'],['纹样库','5 题材 · 20 款'],['工艺校验规则','3 项']].map(([a,b])=>`<div class="card kpi"><span>${a}</span><b>${b}</b></div>`).join('')}</div>
  <div class="grid g2"><div class="card"><b>打样周期对比</b><p class="note">传统：微信改稿 + 实物打样，每轮 400–2000 元、7–15 天（公开报价）<br>平台：在线 3D 确稿 + 工艺校验后出花纸稿，目标实物打样压到一次（设计目标，非实测）</p>
  <div class="row"><span style="width:60px" class="note">传统</span><div class="prog" style="flex:1;height:14px"><i style="width:100%;background:#c9bfb2"></i></div><span class="note">7–15 天</span></div>
  <div class="row" style="margin-top:8px"><span style="width:60px" class="note">平台</span><div class="prog" style="flex:1;height:14px"><i style="width:12%"></i></div><span class="note">1–2 天</span></div></div>
  <div class="card"><b>待处理</b><table style="margin-top:8px"><tr><td>${ORDER.no}</td><td>${ORDER.customer}</td><td>胜利杯 × ${ORDER.qty}</td><td><span class="tag warn">待设计</span></td></tr>
- <tr><td>DZ-20261029-0016</td><td>长沙某银行</td><td>毛瓷碗 × 300</td><td><span class="tag ok">生产中</span></td></tr><tr><td>DZ-20261027-0011</td><td>株洲某科技公司</td><td>凤尾尊 × 20</td><td><span class="tag">已发货</span></td></tr></table>
+ <tr><td>DZ-20261029-0016</td><td>长沙某银行</td><td>釉下五彩碗 × 300</td><td><span class="tag ok">生产中</span></td></tr><tr><td>DZ-20261027-0011</td><td>株洲某科技公司</td><td>凤尾尊 × 20</td><td><span class="tag">已发货</span></td></tr></table>
  <div class="row" style="margin-top:12px"><button class="btn p" id="b">处理 ${ORDER.no} →</button></div></div></div>`;$('#b').onclick=()=>next('order');$('#mb').onclick=()=>next('order')};
 P.order=()=>{main.innerHTML=`<h2>订单需求</h2><div class="sub">客户在微信/电话里提的需求，录入为结构化定制单</div>
  <div class="card"><table><tr><th>定制单号</th><td>${ORDER.no}</td></tr><tr><th>客户</th><td>${ORDER.customer}（${ORDER.contact}）</td></tr><tr><th>产品</th><td>${ORDER.product}</td></tr><tr><th>数量</th><td>${ORDER.qty} 只</td></tr><tr><th>期望交期</th><td>${ORDER.due}</td></tr><tr><th>题材偏好</th><td>${ORDER.theme}</td></tr><tr><th>需求描述</th><td>${ORDER.brief}</td></tr><tr><th>工艺</th><td>釉下五彩 · 釉下小膜花纸贴花 + 手工分水补色</td></tr></table></div>
  <button class="btn p" id="b">开始设计 →</button>`;$('#b').onclick=()=>next('vessel')};
-P.vessel=async()=>{main.innerHTML=`<h2>器型选择</h2><div class="sub">醴陵代表器型，均为可展开的高精度 3D 模型（右侧可旋转）</div>
+P.vessel=async()=>{main.innerHTML=`<h2>器型选择</h2><div class="sub">醴陵代表器型，均为可展开的高精度 3D 模型（可拖动旋转）</div>
  <div class="grid g3">${VESSELS.map(v=>`<div class="card vessel ${S.vessel==v.id?'on':''}" data-id="${v.id}"><img src="thumbs/${v.id}.png"><b>${v.name}</b><div class="note">${v.size}</div></div>`).join('')}</div>
  <div class="card" id="vs"></div><button class="btn p" id="b">用这个器型设计纹样 →</button>`;
  const show=()=>{const v=vessel();$('#vs').innerHTML=`<b>${v.name}</b> <span class="tag">${v.code}</span><p class="note">${v.story}</p>`};show();
@@ -48,7 +48,7 @@ let lastSnap=null;async function applyPattern(){if(viewer){await viewer.setPatte
 P.pattern=async()=>{main.innerHTML=`<h2>AI 纹样生成</h2><div class="sub">用一句话描述想要的纹样，系统按釉下五彩工艺约束（色板、双勾分水白线）出候选</div>
  <div class="card"><textarea id="prompt" rows="2">釉下五彩，四季花卉，醴陵山水意境，清新淡雅，双勾分水</textarea>
  <div class="row" style="margin-top:8px">${THEMES.map(([k,n])=>`<span class="tag" style="cursor:pointer" data-t="${k}">${n}</span>`).join('')}
- <label class="right note"><input type="checkbox" id="real" style="width:auto" disabled> 真实生成（规划中）</label><button class="btn p" id="gen">生成候选</button></div>
+ <label class="right note"><input type="checkbox" id="real" style="width:22px;height:22px" disabled> 真实生成（规划中）</label><button class="btn p" id="gen">生成候选</button></div>
  <div class="prog" style="margin-top:10px"><i id="pg"></i></div><div class="note" id="gmsg" style="margin-top:6px">从 AI 预生成纹样库返回候选；实时文生图为规划中，已预留接口</div></div>
  <div class="grid g2" id="cands"></div><div class="row"><button class="btn p" id="b" ${S.pattern?'':'disabled'}>去 3D 预览 →</button></div>`;
  const kw={biandou:'扁豆',siji:'四季',mudan:'牡丹',qinniao:'禽鸟',shanshui:'山水'};
@@ -127,18 +127,18 @@ P.wo=async()=>{const v=vessel(),fans=FANS.cup_shengli_13p8_v3;const wo='GD-20261
  <div style="text-align:center;width:150px"><div id="qr"></div><div class="note">扫码查看作品档案</div></div></div>
  <div class="row note" style="margin-top:14px"><span>下单人：小李</span><span>审核：车间主任</span><span class="right">生成时间：${new Date().toLocaleString('zh-CN',{hour12:false})}</span></div></div>
  <div class="row noprint" style="margin-top:14px"><button class="btn p" id="b">查看作品档案与溯源码 →</button></div>`;
- const q=qrcode(0,'M');q.addData(location.href.split('#')[0]+'#trace');q.make();$('#qr').innerHTML=q.createSvgTag({cellSize:4,margin:2});
+ const q=qrcode(0,'M');q.addData(location.href.split(/[?#]/)[0]+'?view=trace#trace');q.make();$('#qr').innerHTML=q.createSvgTag({cellSize:4,margin:2});
  $('#mk').onclick=()=>{S.woMade=1;S.done.wo=1;save();$('#wqty').textContent=$('#qty').value+' 只（含备损 8%，投产 '+Math.ceil($('#qty').value*1.08)+' 只）';$('#wdue').textContent=$('#due').value;$('#wo').style.display='block'};
  $('#b').onclick=()=>next('trace');ensureViewer(0)};
-P.trace=async()=>{const v=vessel();const fresh=!S.pattern;const pid=S.pattern||'mudan_02',wo=S.wo||'GD-20261030-0042',cols=(S.layers||S.qc?.used||[]);let snap=lastSnap||(fresh&&S.vessel=='cup_shengli_13p8_v3'?'lib_cup_shengli_13p8_v3_mudan_02.png':'thumbs/'+S.vessel+'.png');
+P.trace=async()=>{const v=vessel();const fresh=!S.pattern;const pid=S.pattern||'biandou_01',wo=S.wo||'GD-20261030-0042',cols=(S.layers||S.qc?.used||[]);let snap=lastSnap||(fresh&&S.vessel=='cup_shengli_13p8_v3'?'lib_cup_shengli_13p8_v3_biandou_01.png':'thumbs/'+S.vessel+'.png');
  main.innerHTML=`<h2>作品档案与溯源码</h2><div class="sub">消费者扫码看到的手机页面</div><div class="phone"><div class="hero"><img id="hero" src="${snap}"></div><div class="body">
  <div style="font-size:18px;font-weight:700">${v.name} · ${patIndex[pid]?.theme||''}</div><div class="note">醴陵釉下五彩 · 国家级非物质文化遗产</div>
- <div style="margin:10px 0"><span class="tag ok">工艺校验通过</span><span class="tag">溯源码 LL-${wo.slice(3)}-073</span></div>
+ <div style="margin:10px 0">${S.qc&&!S.qc.pass?'<span class="tag bad">工艺校验未通过</span>':'<span class="tag ok">工艺校验通过</span>'}<span class="tag">溯源码 LL-${wo.slice(3)}-073</span></div>
  <table><tr><th>器型</th><td>${v.name}（${v.size}）</td></tr><tr><th>纹样</th><td>${pid}（AI 辅助设计，设计师确认）</td></tr>${cols.length?`<tr><th>色料</th><td>${cols.join('、')}</td></tr>`:''}<tr><th>烧成</th><td>贴花施釉后 1350±50℃ 高温烧成</td></tr><tr><th>工单</th><td>${wo}</td></tr><tr><th>产地</th><td>湖南 · 醴陵</td></tr></table>
- <div style="margin:14px 0 6px;font-weight:600">生产履历</div><div class="tl"><div>10-30 09:12 客户在线确认 3D 效果</div><div>10-30 09:20 工艺校验通过</div><div>10-30 09:25 花纸分色稿出稿</div><div>10-31 贴花、分水、施釉</div><div>11-02 1350℃ 高温烧成，检验合格</div></div>
- <div style="margin:14px 0 6px;font-weight:600">非遗故事</div><p class="note">${v.story} 釉下五彩把颜料画在釉下，坯体 800℃ 素烧、彩绘施釉后经 1350–1410℃ 高温烧成，色彩封在釉层之下。2008 年列入第二批国家级非物质文化遗产名录。</p></div></div>`;
+ <div style="margin:14px 0 6px;font-weight:600">生产履历</div><div class="tl"><div>10-30 09:12 客户在线确认 3D 效果</div><div>10-30 09:20 工艺校验通过</div><div>10-30 09:25 花纸分色稿出稿</div><div>10-31 贴花、分水、施釉</div><div>11-02 1350±50℃ 高温烧成，检验合格</div></div>
+ <div style="margin:14px 0 6px;font-weight:600">非遗故事</div><p class="note">${v.story} 釉下五彩把颜料画在釉下，坯体 800℃ 素烧、彩绘施釉后经 1350±50℃ 高温烧成，色彩封在釉层之下。2008 年列入第二批国家级非物质文化遗产名录。</p></div></div>`;
  S.done.trace=1;save();ensureViewer(0)};
 const STEPNO={order:1,vessel:2,pattern:3,preview:4,qc:5,export:6,wo:7,trace:8,dash:9};
-async function route(){cur=(location.hash||'#dash').slice(1);if(!P[cur])cur='dash';nav();document.querySelector('.user').textContent=cur=='dash'?'业务员 小李':`步骤 ${STEPNO[cur]}/8 · 业务员 小李`;main.scrollTop=0;scrollTo(0,0);await P[cur]();window.__page=cur;window.__ok=1}
+async function route(){cur=(location.hash||'#dash').slice(1);if(document.body.classList.contains('consumer'))cur='trace';if(!P[cur])cur='dash';nav();document.querySelector('.user').textContent=cur=='dash'?'业务员 小李':`步骤 ${STEPNO[cur]}/8 · 业务员 小李`;main.scrollTop=0;scrollTo(0,0);await P[cur]();window.__page=cur;window.__ok=1}
 (async()=>{pal=await loadPalette('patterns/palette.json');const idx=await (await fetch('patterns/index.json')).json();patIndex=Object.fromEntries(idx.items.map(i=>[i.id,i]));
- if(new URLSearchParams(location.search).has('reset'))localStorage.removeItem('ll_state');addEventListener('hashchange',route);route()})();
+ if(new URLSearchParams(location.search).get('view')=='trace')document.body.classList.add('consumer');if(new URLSearchParams(location.search).has('reset'))localStorage.removeItem('ll_state');addEventListener('hashchange',route);route()})();
