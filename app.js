@@ -18,7 +18,7 @@ const loadImg=url=>imgCache[url]??=new Promise((ok,no)=>{const i=new Image();i.o
 const patUrl=id=>`patterns/final/${id}.png`,thumb=id=>`patterns_thumb/${id}.jpg`;
 const vessel=()=>VESSELS.find(v=>v.id===S.vessel);
 const STEPS=[['dash','工作台'],['order','① 订单需求'],['vessel','② 器型选择'],['pattern','③ AI 纹样生成'],['preview','④ 3D 预览确认'],['qc','⑤ 工艺校验'],['export','⑥ 生产稿导出'],['wo','⑦ 下单与工单'],['trace','⑧ 作品档案溯源']];
-function nav(){$('#nav').innerHTML=STEPS.map(([k,n],i)=>(i==1?'<div class="sep">定制流程</div>':'')+`<a href="#${k}" class="${cur==k?'on':''} ${S.done[k]?'done':''}"><i>${S.done[k]?'✓':i||'⌂'}</i>${n.replace(/^[①-⑧] /,'')}</a>`).join('')+'<div class="sep"></div>'}
+function nav(){$('#nav').innerHTML=STEPS.map(([k,n],i)=>(i==1?'<div class="sep">定制流程</div>':'')+`<a href="#${k}" class="${cur==k?'on':''} ${S.done[k]?'done':''}"><i>${S.done[k]?'✓':i||'⌂'}</i>${n.replace(/^[①-⑧] /,'')}</a>`).join('')+'<div class="sep"></div>';const a=document.querySelector('#nav a.on');if(a&&innerWidth<=820)a.scrollIntoView({inline:'center',block:'nearest'})}
 let cur='dash';
 const go=k=>location.hash=k;const next=k=>{S.done[cur]=1;save();go(k)};
 async function ensureViewer(show){stage.classList.toggle('on',!!show);if(!show)return;if(!viewer){viewer=new Viewer($('#v3d'));window.viewer=viewer}
@@ -139,6 +139,6 @@ P.trace=async()=>{const v=vessel();let snap=lastSnap||('thumbs/'+S.vessel+'.png'
  <div style="margin:14px 0 6px;font-weight:600">非遗故事</div><p class="note">${v.story} 釉下五彩把颜料画在釉下，坯体 800℃ 素烧、彩绘施釉后经 1350–1410℃ 高温烧成，色彩封在釉层之下。2008 年列入第二批国家级非物质文化遗产名录。</p></div></div>`;
  S.done.trace=1;save();ensureViewer(0)};
 const STEPNO={order:1,vessel:2,pattern:3,preview:4,qc:5,export:6,wo:7,trace:8,dash:9};
-async function route(){cur=(location.hash||'#dash').slice(1);if(!P[cur])cur='dash';nav();document.querySelector('.user').textContent=`步骤 ${STEPNO[cur]}/9 · 业务员 小李`;main.scrollTop=0;await P[cur]();window.__page=cur;window.__ok=1}
+async function route(){cur=(location.hash||'#dash').slice(1);if(!P[cur])cur='dash';nav();document.querySelector('.user').textContent=`步骤 ${STEPNO[cur]}/9 · 业务员 小李`;main.scrollTop=0;scrollTo(0,0);await P[cur]();window.__page=cur;window.__ok=1}
 (async()=>{pal=await loadPalette('patterns/palette.json');const idx=await (await fetch('patterns/index.json')).json();patIndex=Object.fromEntries(idx.items.map(i=>[i.id,i]));
  if(new URLSearchParams(location.search).has('reset'))localStorage.removeItem('ll_state');addEventListener('hashchange',route);route()})();

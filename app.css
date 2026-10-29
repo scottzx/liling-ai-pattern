@@ -31,3 +31,22 @@ table{border-collapse:collapse;width:100%;font-size:13px}td,th{border:1px solid 
 .phone .hero img{width:100%;display:block;background:var(--bg)}.phone .body{padding:16px}.tl{border-left:2px solid var(--line);margin-left:6px;padding-left:14px}.tl div{position:relative;margin-bottom:10px;font-size:13px}.tl div:before{content:"";position:absolute;left:-20px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--red)}
 .wo{background:#fff;border:1px solid var(--line);padding:24px;border-radius:4px}.wo h3{text-align:center;margin:0 0 4px;letter-spacing:4px}
 @media print{header,nav,aside,.noprint{display:none!important}main{padding:0}}
+
+@media (max-width:820px){
+body{height:auto;min-height:100vh}
+header{padding:8px 12px;gap:8px;position:sticky;top:0;z-index:5}header>div:nth-child(2){min-width:0;flex:1}header b{font-size:15px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}header small{display:none}.logo{width:32px;height:32px;font-size:18px}
+.user{font-size:11px;white-space:nowrap}
+#wrap{flex-direction:column}
+nav{width:auto;border-right:0;border-bottom:1px solid var(--line);padding:6px 8px;display:flex;gap:4px;overflow-x:auto;white-space:nowrap;position:sticky;top:48px;z-index:4;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}nav .sep{display:none}nav a{flex:none;padding:6px 10px;margin:0;font-size:13px}
+aside{width:auto;min-width:0;border-left:0;border-bottom:1px solid var(--line);order:-1}aside.on{display:flex}
+#wrap>nav{order:-2}#v3d{height:52vh;min-height:300px;flex:none;touch-action:none}
+main{padding:14px 12px 28px;overflow:visible}
+h2{font-size:19px}.card{padding:12px}
+.g2{grid-template-columns:1fr}.g3,.g4{grid-template-columns:1fr 1fr}
+.kpi b{font-size:22px}
+.btn{padding:10px 14px}
+table{font-size:12px}th{width:84px}td,th{padding:6px}
+.wo{padding:14px}.phone{width:100%;max-width:400px;border-width:6px}
+}
+@media (max-width:820px) and (orientation:landscape){#wrap{flex-direction:row;flex-wrap:wrap}#wrap>nav{width:100%}aside{width:48%;order:0}#v3d{height:calc(100vh - 110px);min-height:0}main{flex:1;min-width:0}}
