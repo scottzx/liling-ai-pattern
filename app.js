@@ -26,7 +26,7 @@ async function ensureViewer(show){stage.classList.toggle('on',!!show);if(!show)r
 function bar(html){vbar.innerHTML=html}
 // ---------- 页面 ----------
 const P={};
-P.dash=()=>{main.innerHTML=`<div class="mhero"><img src="lib_cup_shengli_13p8_v3_biandou_01.png"><div class="mh-t">醴陵釉下五彩 · AI 纹样定制</div><div class="mh-s">选器型、生成纹样、3D 确稿、工艺校验、一键出花纸稿，单件打样不再反复试烧</div><button class="btn p mh-b" id="mb">开始定制 →</button></div><h2>工作台</h2><div class="sub">今日概览</div>
+P.dash=()=>{main.innerHTML=`<div class="mhero"><img src="lib_cup_shengli_13p8_v3_siji_01.png"><div class="mh-t">醴陵釉下五彩 · AI 纹样定制</div><div class="mh-s">选器型、生成纹样、3D 确稿、工艺校验、一键出花纸稿，单件打样不再反复试烧</div><button class="btn p mh-b" id="mb">开始定制 →</button></div><h2>工作台</h2><div class="sub">今日概览</div>
  <div class="grid g4">${[['近期定制单','3 单'],['标准器型','3 款'],['纹样库','5 题材 · 20 款'],['工艺校验规则','3 项']].map(([a,b])=>`<div class="card kpi"><span>${a}</span><b>${b}</b></div>`).join('')}</div>
  <div class="grid g2"><div class="card"><b>打样周期对比</b><p class="note">传统：微信改稿 + 实物打样，每轮 400–2000 元、7–15 天（公开报价）<br>平台：在线 3D 确稿 + 工艺校验后出花纸稿，目标实物打样压到一次（设计目标，非实测）</p>
  <div class="row"><span style="width:60px" class="note">传统</span><div class="prog" style="flex:1;height:14px"><i style="width:100%;background:#c9bfb2"></i></div><span class="note">7–15 天</span></div>
@@ -130,13 +130,13 @@ P.wo=async()=>{const v=vessel(),fans=FANS.cup_shengli_13p8_v3;const wo='GD-20261
  const q=qrcode(0,'M');q.addData(location.href.split(/[?#]/)[0]+'?view=trace#trace');q.make();$('#qr').innerHTML=q.createSvgTag({cellSize:4,margin:2});
  $('#mk').onclick=()=>{S.woMade=1;S.done.wo=1;save();$('#wqty').textContent=$('#qty').value+' 只（含备损 8%，投产 '+Math.ceil($('#qty').value*1.08)+' 只）';$('#wdue').textContent=$('#due').value;$('#wo').style.display='block'};
  $('#b').onclick=()=>next('trace');ensureViewer(0)};
-P.trace=async()=>{const v=vessel();const fresh=!S.pattern;const pid=S.pattern||'biandou_01',wo=S.wo||'GD-20261030-0042',cols=(S.layers||S.qc?.used||[]);let snap=lastSnap||(fresh&&S.vessel=='cup_shengli_13p8_v3'?'lib_cup_shengli_13p8_v3_biandou_01.png':'thumbs/'+S.vessel+'.png');
+P.trace=async()=>{const v=vessel();const fresh=!S.pattern;const pid=S.pattern||'siji_01',wo=S.wo||'GD-20261030-0042',cols=(S.layers||S.qc?.used||[]);let snap=lastSnap||(fresh&&S.vessel=='cup_shengli_13p8_v3'?'lib_cup_shengli_13p8_v3_siji_01.png':'thumbs/'+S.vessel+'.png');
  main.innerHTML=`<h2>作品档案与溯源码</h2><div class="sub">消费者扫码看到的手机页面</div><div class="phone"><div class="hero"><img id="hero" src="${snap}"></div><div class="body">
  <div style="font-size:18px;font-weight:700">${v.name} · ${patIndex[pid]?.theme||''}</div><div class="note">醴陵釉下五彩 · 国家级非物质文化遗产</div>
  <div style="margin:10px 0">${S.qc&&!S.qc.pass?'<span class="tag bad">工艺校验未通过</span>':'<span class="tag ok">工艺校验通过</span>'}<span class="tag">溯源码 LL-${wo.slice(3)}-073</span></div>
  <table><tr><th>器型</th><td>${v.name}（${v.size}）</td></tr><tr><th>纹样</th><td>${pid}（AI 辅助设计，设计师确认）</td></tr>${cols.length?`<tr><th>色料</th><td>${cols.join('、')}</td></tr>`:''}<tr><th>烧成</th><td>贴花施釉后 1350±50℃ 高温烧成</td></tr><tr><th>工单</th><td>${wo}</td></tr><tr><th>产地</th><td>湖南 · 醴陵</td></tr></table>
  <div style="margin:14px 0 6px;font-weight:600">生产履历</div><div class="tl"><div>10-30 09:12 客户在线确认 3D 效果</div><div>10-30 09:20 工艺校验通过</div><div>10-30 09:25 花纸分色稿出稿</div><div>10-31 贴花、分水、施釉</div><div>11-02 1350±50℃ 高温烧成，检验合格</div></div>
- <div style="margin:14px 0 6px;font-weight:600">非遗故事</div><p class="note">${v.story} 釉下五彩把颜料画在釉下，坯体 800℃ 素烧、彩绘施釉后经 1350±50℃ 高温烧成，色彩封在釉层之下。2008 年列入第二批国家级非物质文化遗产名录。</p></div></div>`;
+ <div style="margin:14px 0 6px;font-weight:600">非遗故事</div><p class="note">${v.story} 釉下五彩把颜料画在釉下，坯体 800℃ 素烧、彩绘施釉后经 1350–1410℃ 高温烧成，色彩封在釉层之下。2008 年列入第二批国家级非物质文化遗产名录。</p></div></div>`;
  S.done.trace=1;save();ensureViewer(0)};
 const STEPNO={order:1,vessel:2,pattern:3,preview:4,qc:5,export:6,wo:7,trace:8,dash:9};
 async function route(){cur=(location.hash||'#dash').slice(1);if(document.body.classList.contains('consumer'))cur='trace';if(!P[cur])cur='dash';nav();document.querySelector('.user').textContent=cur=='dash'?'业务员 小李':`步骤 ${STEPNO[cur]}/8 · 业务员 小李`;main.scrollTop=0;scrollTo(0,0);await P[cur]();window.__page=cur;window.__ok=1}
