@@ -7,7 +7,7 @@ const $=s=>document.querySelector(s),main=$('#main'),stage=$('#stage'),vbar=$('#
 const VESSELS=[
  {id:'cup_shengli_13p8_v3',name:'胜利杯',code:'LL-CUP-1958',size:'高 13.8cm · 口径 8.8cm · 带盖',story:'1958 年醴陵为毛主席试制的釉下五彩带盖茶杯，至今仍是醴陵的代表器型。',main:true},
  {id:'vase_fengweizun_46_v3',name:'凤尾尊',code:'LL-VAS-FWZ46',size:'高 46cm · 腹径约 18cm',story:'喇叭口、长颈、鼓腹的传统陈设瓶型，适合整幅花鸟题材，常搭配扁豆双禽题材纹样。醴陵瓷曾以扁豆双禽瓷瓶获 1915 年巴拿马万国博览会金奖。'},
- {id:'bowl_maoci_12p5_v3',name:'釉下五彩碗',code:'LL-BWL-MC125',size:'口径 12.5cm',story:'醴陵传统碗型，口沿与外壁窄带适合边饰纹样。'}];
+ {id:'bowl_maoci_12p5_v3',name:'毛瓷四季花卉碗器型',code:'LL-BWL-MC125',size:'口径 12.5cm',story:'1974 年毛瓷四季花卉碗器型，醴陵釉下五彩薄胎碗的代表作品，口沿与外壁适合四季花卉纹样。'}];
 const THEMES=[['biandou','扁豆双禽'],['siji','四季花卉'],['mudan','牡丹'],['qinniao','禽鸟花卉'],['shanshui','醴陵山水']];
 const ORDER={no:'DZ-20261030-0018',customer:'湖南某文旅集团',contact:'王经理',product:'胜利杯',qty:100,due:'2026-11-28',theme:'四季花卉',
  brief:'“醴陵窑”文旅伴手礼，要求釉下五彩、四季花卉配醴陵山水意境，清新淡雅，杯身主纹整圈，杯盖配小花。'};
@@ -32,7 +32,7 @@ P.dash=()=>{main.innerHTML=`<div class="mhero"><img src="lib_cup_shengli_13p8_v3
  <div class="row"><span style="width:60px" class="note">传统</span><div class="prog" style="flex:1;height:14px"><i style="width:100%;background:#c9bfb2"></i></div><span class="note">7–15 天</span></div>
  <div class="row" style="margin-top:8px"><span style="width:60px" class="note">平台</span><div class="prog" style="flex:1;height:14px"><i style="width:12%"></i></div><span class="note">1–2 天</span></div></div>
  <div class="card"><b>待处理</b><table style="margin-top:8px"><tr><td>${ORDER.no}</td><td>${ORDER.customer}</td><td>胜利杯 × ${ORDER.qty}</td><td><span class="tag warn">待设计</span></td></tr>
- <tr><td>DZ-20261029-0016</td><td>长沙某银行</td><td>釉下五彩碗 × 300</td><td><span class="tag ok">生产中</span></td></tr><tr><td>DZ-20261027-0011</td><td>株洲某科技公司</td><td>凤尾尊 × 20</td><td><span class="tag">已发货</span></td></tr></table>
+ <tr><td>DZ-20261029-0016</td><td>长沙某银行</td><td>四季花卉碗 × 300</td><td><span class="tag ok">生产中</span></td></tr><tr><td>DZ-20261027-0011</td><td>株洲某科技公司</td><td>凤尾尊 × 20</td><td><span class="tag">已发货</span></td></tr></table>
  <div class="row" style="margin-top:12px"><button class="btn p" id="b">处理 ${ORDER.no} →</button></div></div></div>`;$('#b').onclick=()=>next('order');$('#mb').onclick=()=>next('order')};
 P.order=()=>{main.innerHTML=`<h2>订单需求</h2><div class="sub">客户在微信/电话里提的需求，录入为结构化定制单</div>
  <div class="card"><table><tr><th>定制单号</th><td>${ORDER.no}</td></tr><tr><th>客户</th><td>${ORDER.customer}（${ORDER.contact}）</td></tr><tr><th>产品</th><td>${ORDER.product}</td></tr><tr><th>数量</th><td>${ORDER.qty} 只</td></tr><tr><th>期望交期</th><td>${ORDER.due}</td></tr><tr><th>题材偏好</th><td>${ORDER.theme}</td></tr><tr><th>需求描述</th><td>${ORDER.brief}</td></tr><tr><th>工艺</th><td>釉下五彩 · 釉下小膜花纸贴花 + 手工分水补色</td></tr></table></div>
@@ -139,6 +139,6 @@ P.trace=async()=>{const v=vessel();const fresh=!S.pattern;const pid=S.pattern||'
  <div style="margin:14px 0 6px;font-weight:600">非遗故事</div><p class="note">${v.story} 釉下五彩把颜料画在釉下，坯体 800℃ 素烧、彩绘施釉后经 1350–1410℃ 高温烧成，色彩封在釉层之下。2008 年列入第二批国家级非物质文化遗产名录。</p></div></div>`;
  S.done.trace=1;save();ensureViewer(0)};
 const STEPNO={order:1,vessel:2,pattern:3,preview:4,qc:5,export:6,wo:7,trace:8,dash:9};
-async function route(){cur=(location.hash||'#dash').slice(1);if(document.body.classList.contains('consumer'))cur='trace';if(!P[cur])cur='dash';nav();document.querySelector('.user').textContent=cur=='dash'?'业务员 小李':`步骤 ${STEPNO[cur]}/8 · 业务员 小李`;main.scrollTop=0;scrollTo(0,0);await P[cur]();window.__page=cur;window.__ok=1}
+async function route(){cur=(location.hash||'#dash').slice(1);if(document.body.classList.contains('consumer'))cur='trace';if(!P[cur])cur='dash';nav();if(!S.pattern&&STEPNO[cur]>3&&cur!='dash'){S.theme='siji';S.pattern='siji_01';S.qc=null;save()}document.querySelector('.user').textContent=cur=='dash'?'业务员 小李':`步骤 ${STEPNO[cur]}/8 · 业务员 小李`;main.scrollTop=0;scrollTo(0,0);await P[cur]();window.__page=cur;window.__ok=1}
 (async()=>{pal=await loadPalette('patterns/palette.json');const idx=await (await fetch('patterns/index.json')).json();patIndex=Object.fromEntries(idx.items.map(i=>[i.id,i]));
  if(new URLSearchParams(location.search).get('view')=='trace')document.body.classList.add('consumer');if(new URLSearchParams(location.search).has('reset'))localStorage.removeItem('ll_state');addEventListener('hashchange',route);route()})();
