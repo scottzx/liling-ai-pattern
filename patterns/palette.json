@@ -1,0 +1,116 @@
+{
+ "label": "demo palette, to be calibrated by factory — approximate sRGB hex, not measured fired colours",
+ "outline": "#FFFFFF",
+ "ground": "#FFFFFF",
+ "pigments": {
+  "玛瑙红": "#B8323A",
+  "桃红": "#E07A8F",
+  "芙蓉红": "#E8A0A0",
+  "海碧": "#2F6FA8",
+  "海蓝": "#3D5A98",
+  "草青": "#4E8C4A",
+  "浅绿": "#9CC79A",
+  "墨绿": "#2E5A3A",
+  "碧绿": "#3E9A8A",
+  "钛黄": "#E8C84A",
+  "橘黄": "#E89A3A",
+  "赭色": "#8A5A3A",
+  "紫": "#7A5A9A",
+  "艳黑": "#2A2A2A"
+ },
+ "tint_levels": {
+  "factors": [
+   1.0,
+   0.7,
+   0.45,
+   0.25
+  ],
+  "rule": "hue must be one of the 14 pigments; lighter tints (pigment*f + white*(1-f)) model watercolour density and are NOT violations",
+  "tints": {
+   "玛瑙红": [
+    "#B8323A",
+    "#CD7075",
+    "#DFA3A6",
+    "#EDCCCE"
+   ],
+   "桃红": [
+    "#E07A8F",
+    "#E9A2B1",
+    "#F1C3CD",
+    "#F7DEE3"
+   ],
+   "芙蓉红": [
+    "#E8A0A0",
+    "#EFBCBC",
+    "#F5D4D4",
+    "#F9E7E7"
+   ],
+   "海碧": [
+    "#2F6FA8",
+    "#6D9AC2",
+    "#A1BED8",
+    "#CBDBE9"
+   ],
+   "海蓝": [
+    "#3D5A98",
+    "#778CB7",
+    "#A8B5D1",
+    "#CED6E5"
+   ],
+   "草青": [
+    "#4E8C4A",
+    "#83AE80",
+    "#AFCBAE",
+    "#D3E2D2"
+   ],
+   "浅绿": [
+    "#9CC79A",
+    "#BAD8B8",
+    "#D2E6D2",
+    "#E6F1E6"
+   ],
+   "墨绿": [
+    "#2E5A3A",
+    "#6D8C75",
+    "#A1B5A6",
+    "#CBD6CE"
+   ],
+   "碧绿": [
+    "#3E9A8A",
+    "#78B8AD",
+    "#A8D2CA",
+    "#CFE6E2"
+   ],
+   "钛黄": [
+    "#E8C84A",
+    "#EFD880",
+    "#F5E6AE",
+    "#F9F1D2"
+   ],
+   "橘黄": [
+    "#E89A3A",
+    "#EFB875",
+    "#F5D2A6",
+    "#F9E6CE"
+   ],
+   "赭色": [
+    "#8A5A3A",
+    "#AD8C75",
+    "#CAB5A6",
+    "#E2D6CE"
+   ],
+   "紫": [
+    "#7A5A9A",
+    "#A28CB8",
+    "#C3B5D2",
+    "#DED6E6"
+   ],
+   "艳黑": [
+    "#2A2A2A",
+    "#6A6A6A",
+    "#9F9F9F",
+    "#CACACA"
+   ]
+  }
+ }
+}

@@ -1,0 +1,742 @@
+{
+ "work_size": [
+  2048,
+  1024
+ ],
+ "size_saved": [
+  4096,
+  2048
+ ],
+ "aspect": "2:1, front centre at x=2048",
+ "items": [
+  {
+   "id": "biandou_01",
+   "theme": "扁豆双禽",
+   "prompt": "Chinese Liling underglaze five-colour porcelain painting style, flat decorative design on pure white porcelain ground, every colour area enclosed by thin white outline lines (double-outline shuangou fenshui), soft translucent watercolour fills in agate red, peach pink, sea blue, grass green, light green, titanium yellow, ochre, sparse composition with white space, wide horizontal frieze, elements arranged in a middle horizontal band, no black backgrounds, no gradients, no text, no watermark, no border, flat 2D artwork not a photo of a vase: climbing hyacinth bean vines with purple-red pods and heart leaves, a pair of quails resting below",
+   "compliant": true,
+   "violation_reason": null,
+   "file": "final/biandou_01.png",
+   "preview": "preview/biandou_01_cupfan.png",
+   "palette_colors_used": [
+    "玛瑙红",
+    "桃红",
+    "海碧",
+    "草青",
+    "浅绿",
+    "墨绿",
+    "碧绿",
+    "钛黄",
+    "橘黄",
+    "赭色"
+   ],
+   "check": {
+    "off_palette_hue": 0,
+    "seam_ok": true
+   },
+   "tints": "up to 4 tint levels per pigment",
+   "crop_cup": "crop_cup/biandou_01_cup4096x1428.png",
+   "offpalette_colors": 0,
+   "offpalette_colors_crop": 0
+  },
+  {
+   "id": "biandou_bad",
+   "theme": "扁豆双禽",
+   "prompt": "Chinese Liling underglaze five-colour porcelain painting style, flat decorative design on pure white porcelain ground, every colour area enclosed by thin white outline lines (double-outline shuangou fenshui), soft translucent watercolour fills in agate red, peach pink, sea blue, grass green, light green, titanium yellow, ochre, sparse composition with white space, wide horizontal frieze, elements arranged in a middle horizontal band, no black backgrounds, no gradients, no text, no watermark, no border, flat 2D artwork not a photo of a vase: climbing hyacinth bean vines with purple-red pods and heart leaves, a pair of quails resting below (+ post-edit injection)",
+   "compliant": false,
+   "violation_reason": "色板外颜色：豆荚、花和鹌鹑大面积使用亮紫 #B000FF，不在釉下五彩色板内（色板内的紫是 #7A5A9A）",
+   "file": "final/biandou_bad.png",
+   "preview": "preview/biandou_bad_cupfan.png",
+   "palette_colors_used": [
+    "玛瑙红",
+    "桃红",
+    "海碧",
+    "草青",
+    "浅绿",
+    "墨绿",
+    "碧绿",
+    "钛黄",
+    "橘黄",
+    "赭色",
+    "#B000FF(色板外亮紫)"
+   ],
+   "check": {
+    "seam_ok": true
+   },
+   "coverage": 0.092,
+   "crop_cup": "crop_cup/biandou_bad_cup4096x1428.png",
+   "offpalette_colors": 16,
+   "offpalette_colors_crop": 16
+  },
+  {
+   "id": "biandou_02",
+   "theme": "扁豆双禽",
+   "prompt": "Chinese Liling underglaze five-colour porcelain painting style, flat decorative design on pure white porcelain ground, every colour area enclosed by thin white outline lines (double-outline shuangou fenshui), soft translucent watercolour fills in agate red, peach pink, sea blue, grass green, light green, titanium yellow, ochre, sparse composition with white space, wide horizontal frieze, elements arranged in a middle horizontal band, no black backgrounds, no gradients, no text, no watermark, no border, flat 2D artwork not a photo of a vase: hyacinth bean trellis with blossoms and two quails walking among grass",
+   "compliant": true,
+   "violation_reason": null,
+   "file": "final/biandou_02.png",
+   "preview": "preview/biandou_02_cupfan.png",
+   "palette_colors_used": [
+    "玛瑙红",
+    "芙蓉红",
+    "海碧",
+    "草青",
+    "浅绿",
+    "墨绿",
+    "碧绿",
+    "钛黄",
+    "橘黄",
+    "赭色"
+   ],
+   "check": {
+    "off_palette_hue": 0,
+    "seam_ok": true
+   },
+   "tints": "up to 4 tint levels per pigment",
+   "crop_cup": "crop_cup/biandou_02_cup4096x1428.png",
+   "offpalette_colors": 0,
+   "offpalette_colors_crop": 0
+  },
+  {
+   "id": "biandou_03",
+   "theme": "扁豆双禽",
+   "prompt": "Chinese Liling underglaze five-colour porcelain painting style, flat decorative design on pure white porcelain ground, every colour area enclosed by thin white outline lines (double-outline shuangou fenshui), soft translucent watercolour fills in agate red, peach pink, sea blue, grass green, light green, titanium yellow, ochre, sparse composition with white space, wide horizontal frieze, elements arranged in a middle horizontal band, no black backgrounds, no gradients, no text, no watermark, no border, flat 2D artwork not a photo of a vase: two quails facing each other under drooping hyacinth bean vines with pods",
+   "compliant": true,
+   "violation_reason": null,
+   "file": "final/biandou_03.png",
+   "preview": "preview/biandou_03_cupfan.png",
+   "palette_colors_used": [
+    "玛瑙红",
+    "芙蓉红",
+    "海碧",
+    "草青",
+    "浅绿",
+    "墨绿",
+    "钛黄",
+    "橘黄",
+    "赭色",
+    "艳黑"
+   ],
+   "check": {
+    "off_palette_hue": 0,
+    "seam_ok": true
+   },
+   "tints": "up to 4 tint levels per pigment",
+   "crop_cup": "crop_cup/biandou_03_cup4096x1428.png",
+   "offpalette_colors": 0,
+   "offpalette_colors_crop": 0
+  },
+  {
+   "id": "biandou_04",
+   "theme": "扁豆双禽",
+   "prompt": "Chinese Liling underglaze five-colour porcelain painting style, flat decorative design on pure white porcelain ground, every colour area enclosed by thin white outline lines (double-outline shuangou fenshui), soft translucent watercolour fills in agate red, peach pink, sea blue, grass green, light green, titanium yellow, ochre, sparse composition with white space, wide horizontal frieze, elements arranged in a middle horizontal band, no black backgrounds, no gradients, no text, no watermark, no border, flat 2D artwork not a photo of a vase: hyacinth bean branches arching across with seed pods, two small quails pecking",
+   "compliant": true,
+   "violation_reason": null,
+   "file": "final/biandou_04.png",
+   "preview": "preview/biandou_04_cupfan.png",
+   "palette_colors_used": [
+    "玛瑙红",
+    "桃红",
+    "芙蓉红",
+    "海碧",
+    "草青",
+    "浅绿",
+    "墨绿",
+    "钛黄",
+    "橘黄",
+    "赭色"
+   ],
+   "check": {
+    "off_palette_hue": 0,
+    "seam_ok": true
+   },
+   "tints": "up to 4 tint levels per pigment",
+   "crop_cup": "crop_cup/biandou_04_cup4096x1428.png",
+   "offpalette_colors": 0,
+   "offpalette_colors_crop": 0
+  },
+  {
+   "id": "siji_01",
+   "theme": "四季花卉",
+   "prompt": "Chinese Liling underglaze five-colour porcelain painting style, flat decorative design on pure white porcelain ground, every colour area enclosed by thin white outline lines (double-outline shuangou fenshui), soft translucent watercolour fills in agate red, peach pink, sea blue, grass green, light green, titanium yellow, ochre, sparse composition with white space, wide horizontal frieze, elements arranged in a middle horizontal band, no black backgrounds, no gradients, no text, no watermark, no border, flat 2D artwork not a photo of a vase: rose, hibiscus, chrysanthemum and plum blossom branches arranged in a continuous frieze",
+   "compliant": true,
+   "violation_reason": null,
+   "file": "final/siji_01.png",
+   "preview": "preview/siji_01_cupfan.png",
+   "palette_colors_used": [
+    "玛瑙红",
+    "芙蓉红",
+    "海碧",
+    "海蓝",
+    "草青",
+    "浅绿",
+    "墨绿",
+    "钛黄",
+    "橘黄",
+    "赭色",
+    "艳黑"
+   ],
+   "check": {
+    "off_palette_hue": 0,
+    "seam_ok": true
+   },
+   "tints": "up to 4 tint levels per pigment",
+   "crop_cup": "crop_cup/siji_01_cup4096x1428.png",
+   "offpalette_colors": 0,
+   "offpalette_colors_crop": 0
+  },
+  {
+   "id": "siji_bad",
+   "theme": "四季花卉",
+   "prompt": "Chinese Liling underglaze five-colour porcelain painting style, flat decorative design on pure white porcelain ground, every colour area enclosed by thin white outline lines (double-outline shuangou fenshui), soft translucent watercolour fills in agate red, peach pink, sea blue, grass green, light green, titanium yellow, ochre, sparse composition with white space, wide horizontal frieze, elements arranged in a middle horizontal band, no black backgrounds, no gradients, no text, no watermark, no border, flat 2D artwork not a photo of a vase: rose, hibiscus, chrysanthemum and plum blossom branches arranged in a continuous frieze (+ post-edit injection)",
+   "compliant": false,
+   "violation_reason": "禁止叠色：所有叶片先铺海碧（淡蓝），再整块罩实心艳黑，烧成无法得到墨蓝（黑叶外缘露出海碧底）",
+   "file": "final/siji_bad.png",
+   "preview": "preview/siji_bad_cupfan.png",
+   "palette_colors_used": [
+    "玛瑙红",
+    "芙蓉红",
+    "海碧",
+    "海蓝",
+    "草青",
+    "浅绿",
+    "墨绿",
+    "钛黄",
+    "橘黄",
+    "赭色",
+    "艳黑",
+    "海碧底+实心艳黑叠色"
+   ],
+   "check": {
+    "seam_ok": true
+   },
+   "coverage": 0.043,
+   "crop_cup": "crop_cup/siji_bad_cup4096x1428.png",
+   "offpalette_colors": 16,
+   "offpalette_colors_crop": 16
+  },
+  {
+   "id": "siji_02",
+   "theme": "四季花卉",
+   "prompt": "Chinese Liling underglaze five-colour porcelain painting style, flat decorative design on pure white porcelain ground, every colour area enclosed by thin white outline lines (double-outline shuangou fenshui), soft translucent watercolour fills in agate red, peach pink, sea blue, grass green, light green, titanium yellow, ochre, sparse composition with white space, wide horizontal frieze, elements arranged in a middle horizontal band, no black backgrounds, no gradients, no text, no watermark, no border, flat 2D artwork not a photo of a vase: four-seasons flowers: pink roses, hibiscus, yellow chrysanthemums, red plum blossoms",
+   "compliant": true,
+   "violation_reason": null,
+   "file": "final/siji_02.png",
+   "preview": "preview/siji_02_cupfan.png",
+   "palette_colors_used": [
+    "玛瑙红",
+    "芙蓉红",
+    "草青",
+    "浅绿",
+    "墨绿",
+    "碧绿",
+    "钛黄",
+    "橘黄",
+    "赭色"
+   ],
+   "check": {
+    "off_palette_hue": 0,
+    "seam_ok": true
+   },
+   "tints": "up to 4 tint levels per pigment",
+   "crop_cup": "crop_cup/siji_02_cup4096x1428.png",
+   "offpalette_colors": 0,
+   "offpalette_colors_crop": 0
+  },
+  {
+   "id": "siji_03",
+   "theme": "四季花卉",
+   "prompt": "Chinese Liling underglaze five-colour porcelain painting style, flat decorative design on pure white porcelain ground, every colour area enclosed by thin white outline lines (double-outline shuangou fenshui), soft translucent watercolour fills in agate red, peach pink, sea blue, grass green, light green, titanium yellow, ochre, sparse composition with white space, wide horizontal frieze, elements arranged in a middle horizontal band, no black backgrounds, no gradients, no text, no watermark, no border, flat 2D artwork not a photo of a vase: scattered sprays of rose, hibiscus, chrysanthemum and winter plum with leaves",
+   "compliant": true,
+   "violation_reason": null,
+   "file": "final/siji_03.png",
+   "preview": "preview/siji_03_cupfan.png",
+   "palette_colors_used": [
+    "玛瑙红",
+    "桃红",
+    "芙蓉红",
+    "海碧",
+    "草青",
+    "浅绿",
+    "墨绿",
+    "钛黄",
+    "橘黄",
+    "赭色"
+   ],
+   "check": {
+    "off_palette_hue": 0,
+    "seam_ok": true
+   },
+   "tints": "up to 4 tint levels per pigment",
+   "crop_cup": "crop_cup/siji_03_cup4096x1428.png",
+   "offpalette_colors": 0,
+   "offpalette_colors_crop": 0
+  },
+  {
+   "id": "siji_04",
+   "theme": "四季花卉",
+   "prompt": "Chinese Liling underglaze five-colour porcelain painting style, flat decorative design on pure white porcelain ground, every colour area enclosed by thin white outline lines (double-outline shuangou fenshui), soft translucent watercolour fills in agate red, peach pink, sea blue, grass green, light green, titanium yellow, ochre, sparse composition with white space, wide horizontal frieze, elements arranged in a middle horizontal band, no black backgrounds, no gradients, no text, no watermark, no border, flat 2D artwork not a photo of a vase: chrysanthemum and plum blossom branches interleaved with rose and hibiscus",
+   "compliant": true,
+   "violation_reason": null,
+   "file": "final/siji_04.png",
+   "preview": "preview/siji_04_cupfan.png",
+   "palette_colors_used": [
+    "玛瑙红",
+    "桃红",
+    "芙蓉红",
+    "海碧",
+    "海蓝",
+    "草青",
+    "浅绿",
+    "墨绿",
+    "钛黄",
+    "橘黄",
+    "赭色"
+   ],
+   "check": {
+    "off_palette_hue": 0,
+    "seam_ok": true
+   },
+   "tints": "up to 4 tint levels per pigment",
+   "crop_cup": "crop_cup/siji_04_cup4096x1428.png",
+   "offpalette_colors": 0,
+   "offpalette_colors_crop": 0
+  },
+  {
+   "id": "mudan_01",
+   "theme": "牡丹",
+   "prompt": "Chinese Liling underglaze five-colour porcelain painting style, flat decorative design on pure white porcelain ground, every colour area enclosed by thin white outline lines (double-outline shuangou fenshui), soft translucent watercolour fills in agate red, peach pink, sea blue, grass green, light green, titanium yellow, ochre, sparse composition with white space, wide horizontal frieze, elements arranged in a middle horizontal band, no black backgrounds, no gradients, no text, no watermark, no border, flat 2D artwork not a photo of a vase: large peony blossoms in agate red and peach pink with broad green leaves",
+   "compliant": true,
+   "violation_reason": null,
+   "file": "final/mudan_01.png",
+   "preview": "preview/mudan_01_cupfan.png",
+   "palette_colors_used": [
+    "玛瑙红",
+    "芙蓉红",
+    "海碧",
+    "草青",
+    "浅绿",
+    "墨绿",
+    "碧绿",
+    "钛黄",
+    "橘黄",
+    "赭色"
+   ],
+   "check": {
+    "off_palette_hue": 0,
+    "seam_ok": true
+   },
+   "tints": "up to 4 tint levels per pigment",
+   "crop_cup": "crop_cup/mudan_01_cup4096x1428.png",
+   "offpalette_colors": 0,
+   "offpalette_colors_crop": 0
+  },
+  {
+   "id": "mudan_bad",
+   "theme": "牡丹",
+   "prompt": "Chinese Liling underglaze five-colour porcelain painting style, flat decorative design on pure white porcelain ground, every colour area enclosed by thin white outline lines (double-outline shuangou fenshui), soft translucent watercolour fills in agate red, peach pink, sea blue, grass green, light green, titanium yellow, ochre, sparse composition with white space, wide horizontal frieze, elements arranged in a middle horizontal band, no black backgrounds, no gradients, no text, no watermark, no border, flat 2D artwork not a photo of a vase: large peony blossoms in agate red and peach pink with broad green leaves (+ post-edit injection)",
+   "compliant": false,
+   "violation_reason": "色板外颜色：全部牡丹花瓣使用亮紫 #B000FF，不在色板内",
+   "file": "final/mudan_bad.png",
+   "preview": "preview/mudan_bad_cupfan.png",
+   "palette_colors_used": [
+    "玛瑙红",
+    "芙蓉红",
+    "海碧",
+    "草青",
+    "浅绿",
+    "墨绿",
+    "碧绿",
+    "钛黄",
+    "橘黄",
+    "赭色",
+    "#B000FF(色板外亮紫)"
+   ],
+   "check": {
+    "seam_ok": true
+   },
+   "coverage": 0.132,
+   "crop_cup": "crop_cup/mudan_bad_cup4096x1428.png",
+   "offpalette_colors": 22,
+   "offpalette_colors_crop": 22
+  },
+  {
+   "id": "mudan_02",
+   "theme": "牡丹",
+   "prompt": "Chinese Liling underglaze five-colour porcelain painting style, flat decorative design on pure white porcelain ground, every colour area enclosed by thin white outline lines (double-outline shuangou fenshui), soft translucent watercolour fills in agate red, peach pink, sea blue, grass green, light green, titanium yellow, ochre, sparse composition with white space, wide horizontal frieze, elements arranged in a middle horizontal band, no black backgrounds, no gradients, no text, no watermark, no border, flat 2D artwork not a photo of a vase: peony bush with three open blooms and buds, flowing leaves",
+   "compliant": true,
+   "violation_reason": null,
+   "file": "final/mudan_02.png",
+   "preview": "preview/mudan_02_cupfan.png",
+   "palette_colors_used": [
+    "玛瑙红",
+    "桃红",
+    "芙蓉红",
+    "海碧",
+    "草青",
+    "浅绿",
+    "墨绿",
+    "碧绿",
+    "钛黄",
+    "橘黄",
+    "赭色"
+   ],
+   "check": {
+    "off_palette_hue": 0,
+    "seam_ok": true
+   },
+   "tints": "up to 4 tint levels per pigment",
+   "crop_cup": "crop_cup/mudan_02_cup4096x1428.png",
+   "offpalette_colors": 0,
+   "offpalette_colors_crop": 0
+  },
+  {
+   "id": "mudan_03",
+   "theme": "牡丹",
+   "prompt": "Chinese Liling underglaze five-colour porcelain painting style, flat decorative design on pure white porcelain ground, every colour area enclosed by thin white outline lines (double-outline shuangou fenshui), soft translucent watercolour fills in agate red, peach pink, sea blue, grass green, light green, titanium yellow, ochre, sparse composition with white space, wide horizontal frieze, elements arranged in a middle horizontal band, no black backgrounds, no gradients, no text, no watermark, no border, flat 2D artwork not a photo of a vase: single row of peonies, alternating red and pink, with butterflies",
+   "compliant": true,
+   "violation_reason": null,
+   "file": "final/mudan_03.png",
+   "preview": "preview/mudan_03_cupfan.png",
+   "palette_colors_used": [
+    "玛瑙红",
+    "芙蓉红",
+    "海碧",
+    "草青",
+    "浅绿",
+    "墨绿",
+    "碧绿",
+    "钛黄",
+    "橘黄",
+    "赭色"
+   ],
+   "check": {
+    "off_palette_hue": 0,
+    "seam_ok": true
+   },
+   "tints": "up to 4 tint levels per pigment",
+   "crop_cup": "crop_cup/mudan_03_cup4096x1428.png",
+   "offpalette_colors": 0,
+   "offpalette_colors_crop": 0
+  },
+  {
+   "id": "mudan_04",
+   "theme": "牡丹",
+   "prompt": "Chinese Liling underglaze five-colour porcelain painting style, flat decorative design on pure white porcelain ground, every colour area enclosed by thin white outline lines (double-outline shuangou fenshui), soft translucent watercolour fills in agate red, peach pink, sea blue, grass green, light green, titanium yellow, ochre, sparse composition with white space, wide horizontal frieze, elements arranged in a middle horizontal band, no black backgrounds, no gradients, no text, no watermark, no border, flat 2D artwork not a photo of a vase: peony branches with buds and blooms in a continuous scroll",
+   "compliant": true,
+   "violation_reason": null,
+   "file": "final/mudan_04.png",
+   "preview": "preview/mudan_04_cupfan.png",
+   "palette_colors_used": [
+    "玛瑙红",
+    "芙蓉红",
+    "海碧",
+    "草青",
+    "浅绿",
+    "墨绿",
+    "碧绿",
+    "钛黄",
+    "橘黄",
+    "赭色"
+   ],
+   "check": {
+    "off_palette_hue": 0,
+    "seam_ok": true
+   },
+   "tints": "up to 4 tint levels per pigment",
+   "crop_cup": "crop_cup/mudan_04_cup4096x1428.png",
+   "offpalette_colors": 0,
+   "offpalette_colors_crop": 0
+  },
+  {
+   "id": "qinniao_01",
+   "theme": "禽鸟花卉",
+   "prompt": "Chinese Liling underglaze five-colour porcelain painting style, flat decorative design on pure white porcelain ground, every colour area enclosed by thin white outline lines (double-outline shuangou fenshui), soft translucent watercolour fills in agate red, peach pink, sea blue, grass green, light green, titanium yellow, ochre, sparse composition with white space, wide horizontal frieze, elements arranged in a middle horizontal band, no black backgrounds, no gradients, no text, no watermark, no border, flat 2D artwork not a photo of a vase: magpies perched on blossoming branches",
+   "compliant": true,
+   "violation_reason": null,
+   "file": "final/qinniao_01.png",
+   "preview": "preview/qinniao_01_cupfan.png",
+   "palette_colors_used": [
+    "玛瑙红",
+    "芙蓉红",
+    "海碧",
+    "海蓝",
+    "草青",
+    "浅绿",
+    "墨绿",
+    "钛黄",
+    "橘黄",
+    "赭色",
+    "艳黑"
+   ],
+   "check": {
+    "off_palette_hue": 0,
+    "seam_ok": true
+   },
+   "tints": "up to 4 tint levels per pigment",
+   "crop_cup": "crop_cup/qinniao_01_cup4096x1428.png",
+   "offpalette_colors": 0,
+   "offpalette_colors_crop": 0
+  },
+  {
+   "id": "qinniao_bad",
+   "theme": "禽鸟花卉",
+   "prompt": "Chinese Liling underglaze five-colour porcelain painting style, flat decorative design on pure white porcelain ground, every colour area enclosed by thin white outline lines (double-outline shuangou fenshui), soft translucent watercolour fills in agate red, peach pink, sea blue, grass green, light green, titanium yellow, ochre, sparse composition with white space, wide horizontal frieze, elements arranged in a middle horizontal band, no black backgrounds, no gradients, no text, no watermark, no border, flat 2D artwork not a photo of a vase: magpies perched on blossoming branches (+ post-edit injection)",
+   "compliant": false,
+   "violation_reason": "色板外颜色：喜鹊和花朵大面积使用亮紫 #B000FF，不在色板内",
+   "file": "final/qinniao_bad.png",
+   "preview": "preview/qinniao_bad_cupfan.png",
+   "palette_colors_used": [
+    "玛瑙红",
+    "芙蓉红",
+    "海碧",
+    "海蓝",
+    "草青",
+    "浅绿",
+    "墨绿",
+    "钛黄",
+    "橘黄",
+    "赭色",
+    "艳黑",
+    "#B000FF(色板外亮紫)"
+   ],
+   "check": {
+    "seam_ok": true
+   },
+   "coverage": 0.041,
+   "crop_cup": "crop_cup/qinniao_bad_cup4096x1428.png",
+   "offpalette_colors": 23,
+   "offpalette_colors_crop": 23
+  },
+  {
+   "id": "qinniao_02",
+   "theme": "禽鸟花卉",
+   "prompt": "Chinese Liling underglaze five-colour porcelain painting style, flat decorative design on pure white porcelain ground, every colour area enclosed by thin white outline lines (double-outline shuangou fenshui), soft translucent watercolour fills in agate red, peach pink, sea blue, grass green, light green, titanium yellow, ochre, sparse composition with white space, wide horizontal frieze, elements arranged in a middle horizontal band, no black backgrounds, no gradients, no text, no watermark, no border, flat 2D artwork not a photo of a vase: swallows flying over willow and peach blossoms",
+   "compliant": true,
+   "violation_reason": null,
+   "file": "final/qinniao_02.png",
+   "preview": "preview/qinniao_02_cupfan.png",
+   "palette_colors_used": [
+    "玛瑙红",
+    "桃红",
+    "芙蓉红",
+    "海碧",
+    "海蓝",
+    "草青",
+    "浅绿",
+    "墨绿",
+    "钛黄",
+    "橘黄",
+    "赭色",
+    "艳黑"
+   ],
+   "check": {
+    "off_palette_hue": 0,
+    "seam_ok": true
+   },
+   "tints": "up to 4 tint levels per pigment",
+   "crop_cup": "crop_cup/qinniao_02_cup4096x1428.png",
+   "offpalette_colors": 0,
+   "offpalette_colors_crop": 0
+  },
+  {
+   "id": "qinniao_03",
+   "theme": "禽鸟花卉",
+   "prompt": "Chinese Liling underglaze five-colour porcelain painting style, flat decorative design on pure white porcelain ground, every colour area enclosed by thin white outline lines (double-outline shuangou fenshui), soft translucent watercolour fills in agate red, peach pink, sea blue, grass green, light green, titanium yellow, ochre, sparse composition with white space, wide horizontal frieze, elements arranged in a middle horizontal band, no black backgrounds, no gradients, no text, no watermark, no border, flat 2D artwork not a photo of a vase: a kingfisher on a lotus stem with lotus flowers and leaves",
+   "compliant": true,
+   "violation_reason": null,
+   "file": "final/qinniao_03.png",
+   "preview": "preview/qinniao_03_cupfan.png",
+   "palette_colors_used": [
+    "玛瑙红",
+    "芙蓉红",
+    "海碧",
+    "草青",
+    "浅绿",
+    "墨绿",
+    "碧绿",
+    "钛黄",
+    "橘黄",
+    "赭色"
+   ],
+   "check": {
+    "off_palette_hue": 0,
+    "seam_ok": true
+   },
+   "tints": "up to 4 tint levels per pigment",
+   "crop_cup": "crop_cup/qinniao_03_cup4096x1428.png",
+   "offpalette_colors": 0,
+   "offpalette_colors_crop": 0
+  },
+  {
+   "id": "qinniao_04",
+   "theme": "禽鸟花卉",
+   "prompt": "Chinese Liling underglaze five-colour porcelain painting style, flat decorative design on pure white porcelain ground, every colour area enclosed by thin white outline lines (double-outline shuangou fenshui), soft translucent watercolour fills in agate red, peach pink, sea blue, grass green, light green, titanium yellow, ochre, sparse composition with white space, wide horizontal frieze, elements arranged in a middle horizontal band, no black backgrounds, no gradients, no text, no watermark, no border, flat 2D artwork not a photo of a vase: small songbirds on bamboo and orchid sprays",
+   "compliant": true,
+   "violation_reason": null,
+   "file": "final/qinniao_04.png",
+   "preview": "preview/qinniao_04_cupfan.png",
+   "palette_colors_used": [
+    "芙蓉红",
+    "海碧",
+    "草青",
+    "浅绿",
+    "墨绿",
+    "钛黄",
+    "橘黄",
+    "赭色"
+   ],
+   "check": {
+    "off_palette_hue": 0,
+    "seam_ok": true
+   },
+   "tints": "up to 4 tint levels per pigment",
+   "crop_cup": "crop_cup/qinniao_04_cup4096x1428.png",
+   "offpalette_colors": 0,
+   "offpalette_colors_crop": 0
+  },
+  {
+   "id": "shanshui_01",
+   "theme": "醴陵山水",
+   "prompt": "Chinese Liling underglaze five-colour porcelain painting style, flat decorative design on pure white porcelain ground, every colour area enclosed by thin white outline lines (double-outline shuangou fenshui), soft translucent watercolour fills in agate red, peach pink, sea blue, grass green, light green, titanium yellow, ochre, sparse composition with white space, wide horizontal frieze, elements arranged in a middle horizontal band, no black backgrounds, no gradients, no text, no watermark, no border, flat 2D artwork not a photo of a vase: Liling river landscape with layered hills, small boats and pine trees",
+   "compliant": true,
+   "violation_reason": null,
+   "file": "final/shanshui_01.png",
+   "preview": "preview/shanshui_01_cupfan.png",
+   "palette_colors_used": [
+    "芙蓉红",
+    "海碧",
+    "草青",
+    "浅绿",
+    "墨绿",
+    "碧绿",
+    "钛黄",
+    "橘黄",
+    "赭色"
+   ],
+   "check": {
+    "off_palette_hue": 0,
+    "seam_ok": true
+   },
+   "tints": "up to 4 tint levels per pigment",
+   "crop_cup": "crop_cup/shanshui_01_cup4096x1428.png",
+   "offpalette_colors": 0,
+   "offpalette_colors_crop": 0
+  },
+  {
+   "id": "shanshui_bad",
+   "theme": "醴陵山水",
+   "prompt": "Chinese Liling underglaze five-colour porcelain painting style, flat decorative design on pure white porcelain ground, every colour area enclosed by thin white outline lines (double-outline shuangou fenshui), soft translucent watercolour fills in agate red, peach pink, sea blue, grass green, light green, titanium yellow, ochre, sparse composition with white space, wide horizontal frieze, elements arranged in a middle horizontal band, no black backgrounds, no gradients, no text, no watermark, no border, flat 2D artwork not a photo of a vase: Liling river landscape with layered hills, small boats and pine trees (+ post-edit injection)",
+   "compliant": false,
+   "violation_reason": "禁止叠色：整条河面先铺海碧，再整块罩实心艳黑，烧成无法得到墨蓝（外缘露出海碧底）",
+   "file": "final/shanshui_bad.png",
+   "preview": "preview/shanshui_bad_cupfan.png",
+   "palette_colors_used": [
+    "芙蓉红",
+    "海碧",
+    "草青",
+    "浅绿",
+    "墨绿",
+    "碧绿",
+    "钛黄",
+    "橘黄",
+    "赭色",
+    "海碧底+实心艳黑叠色"
+   ],
+   "check": {
+    "seam_ok": true
+   },
+   "coverage": 0.073,
+   "crop_cup": "crop_cup/shanshui_bad_cup4096x1428.png",
+   "offpalette_colors": 22,
+   "offpalette_colors_crop": 22
+  },
+  {
+   "id": "shanshui_02",
+   "theme": "醴陵山水",
+   "prompt": "Chinese Liling underglaze five-colour porcelain painting style, flat decorative design on pure white porcelain ground, every colour area enclosed by thin white outline lines (double-outline shuangou fenshui), soft translucent watercolour fills in agate red, peach pink, sea blue, grass green, light green, titanium yellow, ochre, sparse composition with white space, wide horizontal frieze, elements arranged in a middle horizontal band, no black backgrounds, no gradients, no text, no watermark, no border, flat 2D artwork not a photo of a vase: misty green mountains with a pagoda, river and fishing boats",
+   "compliant": true,
+   "violation_reason": null,
+   "file": "final/shanshui_02.png",
+   "preview": "preview/shanshui_02_cupfan.png",
+   "palette_colors_used": [
+    "芙蓉红",
+    "海碧",
+    "草青",
+    "浅绿",
+    "墨绿",
+    "碧绿",
+    "钛黄",
+    "橘黄",
+    "赭色"
+   ],
+   "check": {
+    "off_palette_hue": 0,
+    "seam_ok": true
+   },
+   "tints": "up to 4 tint levels per pigment",
+   "crop_cup": "crop_cup/shanshui_02_cup4096x1428.png",
+   "offpalette_colors": 0,
+   "offpalette_colors_crop": 0
+  },
+  {
+   "id": "shanshui_03",
+   "theme": "醴陵山水",
+   "prompt": "Chinese Liling underglaze five-colour porcelain painting style, flat decorative design on pure white porcelain ground, every colour area enclosed by thin white outline lines (double-outline shuangou fenshui), soft translucent watercolour fills in agate red, peach pink, sea blue, grass green, light green, titanium yellow, ochre, sparse composition with white space, wide horizontal frieze, elements arranged in a middle horizontal band, no black backgrounds, no gradients, no text, no watermark, no border, flat 2D artwork not a photo of a vase: rolling hills, terraced fields and a village by the Lu river",
+   "compliant": true,
+   "violation_reason": null,
+   "file": "final/shanshui_03.png",
+   "preview": "preview/shanshui_03_cupfan.png",
+   "palette_colors_used": [
+    "玛瑙红",
+    "芙蓉红",
+    "海碧",
+    "草青",
+    "浅绿",
+    "墨绿",
+    "碧绿",
+    "钛黄",
+    "橘黄",
+    "赭色"
+   ],
+   "check": {
+    "off_palette_hue": 0,
+    "seam_ok": true
+   },
+   "tints": "up to 4 tint levels per pigment",
+   "crop_cup": "crop_cup/shanshui_03_cup4096x1428.png",
+   "offpalette_colors": 0,
+   "offpalette_colors_crop": 0
+  },
+  {
+   "id": "shanshui_04",
+   "theme": "醴陵山水",
+   "prompt": "Chinese Liling underglaze five-colour porcelain painting style, flat decorative design on pure white porcelain ground, every colour area enclosed by thin white outline lines (double-outline shuangou fenshui), soft translucent watercolour fills in agate red, peach pink, sea blue, grass green, light green, titanium yellow, ochre, sparse composition with white space, wide horizontal frieze, elements arranged in a middle horizontal band, no black backgrounds, no gradients, no text, no watermark, no border, flat 2D artwork not a photo of a vase: pine-covered peaks, waterfalls and a stone bridge in continuous panorama",
+   "compliant": true,
+   "violation_reason": null,
+   "file": "final/shanshui_04.png",
+   "preview": "preview/shanshui_04_cupfan.png",
+   "palette_colors_used": [
+    "玛瑙红",
+    "芙蓉红",
+    "海碧",
+    "草青",
+    "浅绿",
+    "墨绿",
+    "钛黄",
+    "橘黄",
+    "赭色"
+   ],
+   "check": {
+    "off_palette_hue": 0,
+    "seam_ok": true
+   },
+   "tints": "up to 4 tint levels per pigment",
+   "crop_cup": "crop_cup/shanshui_04_cup4096x1428.png",
+   "offpalette_colors": 0,
+   "offpalette_colors_crop": 0
+  }
+ ],
+ "tint_rule": "hue-in-palette is the compliance rule; 4 tint levels per pigment allowed",
+ "crop_cup": "centred 4096x1428 (rows 310-1738) of each 4096x2048 image = cup main band 2.87:1; cup fan previews use this crop",
+ "offpalette_rule": "offpalette_colors = number of distinct RGB values not equal to an exact palette tint (palette.json tint_levels) or #FFFFFF"
+}
