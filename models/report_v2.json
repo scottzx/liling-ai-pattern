@@ -1,0 +1,652 @@
+{
+ "vase_fengweizun_46": {
+  "name": "扁豆双禽瓶/巴拿马瓶(凤尾尊)",
+  "objects": {
+   "vase_fengweizun_46_body": 20640
+  },
+  "tris": 20640,
+  "raw_kb": 490.953125,
+  "capacity_ml": null,
+  "islands": {
+   "base": {
+    "kind": "planar",
+    "real_W_mm": 108.0,
+    "real_H_mm": 108.0,
+    "z_mm": [
+     10.0,
+     10.0
+    ],
+    "squeeze_min": null,
+    "rect": [
+     0.438,
+     0.1593,
+     0.0615,
+     0.0615
+    ],
+    "R_mm": 54.0,
+    "px_per_mm_at_2048": 1.17,
+    "island_px": [
+     126,
+     126
+    ]
+   },
+   "outer_0": {
+    "kind": "cyl",
+    "real_W_mm": 480.7,
+    "real_H_mm": 42.9,
+    "z_mm": [
+     0.0,
+     20.8
+    ],
+    "squeeze_min": 0.71,
+    "rect": [
+     0.015,
+     0.4129,
+     0.5474,
+     0.0488
+    ],
+    "R_mm": 76.5,
+    "px_per_mm_at_2048": 2.33,
+    "island_px": [
+     1121,
+     100
+    ]
+   },
+   "outer_1": {
+    "kind": "cyl",
+    "real_W_mm": 571.5,
+    "real_H_mm": 76.2,
+    "z_mm": [
+     20.8,
+     95.5
+    ],
+    "squeeze_min": 0.84,
+    "rect": [
+     0.015,
+     0.4767,
+     0.6508,
+     0.0868
+    ],
+    "R_mm": 91.0,
+    "px_per_mm_at_2048": 2.33,
+    "island_px": [
+     1333,
+     178
+    ]
+   },
+   "outer_2": {
+    "kind": "cyl",
+    "real_W_mm": 578.1,
+    "real_H_mm": 114.3,
+    "z_mm": [
+     95.5,
+     203.6
+    ],
+    "squeeze_min": 0.68,
+    "rect": [
+     0.015,
+     0.5785,
+     0.6584,
+     0.1302
+    ],
+    "R_mm": 92.0,
+    "px_per_mm_at_2048": 2.33,
+    "island_px": [
+     1348,
+     267
+    ]
+   },
+   "outer_3": {
+    "kind": "cyl",
+    "real_W_mm": 393.9,
+    "real_H_mm": 47.6,
+    "z_mm": [
+     203.6,
+     245.6
+    ],
+    "squeeze_min": 0.64,
+    "rect": [
+     0.3191,
+     0.767,
+     0.4486,
+     0.0542
+    ],
+    "R_mm": 62.7,
+    "px_per_mm_at_2048": 2.33,
+    "island_px": [
+     919,
+     111
+    ]
+   },
+   "outer_4": {
+    "kind": "cyl",
+    "real_W_mm": 253.9,
+    "real_H_mm": 85.7,
+    "z_mm": [
+     245.6,
+     330.1
+    ],
+    "squeeze_min": 0.73,
+    "rect": [
+     0.015,
+     0.7237,
+     0.2891,
+     0.0976
+    ],
+    "R_mm": 40.4,
+    "px_per_mm_at_2048": 2.33,
+    "island_px": [
+     592,
+     200
+    ]
+   },
+   "outer_5": {
+    "kind": "cyl",
+    "real_W_mm": 329.8,
+    "real_H_mm": 76.2,
+    "z_mm": [
+     330.1,
+     402.8
+    ],
+    "squeeze_min": 0.58,
+    "rect": [
+     0.5751,
+     0.8363,
+     0.3756,
+     0.0868
+    ],
+    "R_mm": 52.5,
+    "px_per_mm_at_2048": 2.33,
+    "island_px": [
+     769,
+     178
+    ]
+   },
+   "outer_6": {
+    "kind": "cyl",
+    "real_W_mm": 478.6,
+    "real_H_mm": 38.1,
+    "z_mm": [
+     402.8,
+     432.5
+    ],
+    "squeeze_min": 0.69,
+    "rect": [
+     0.015,
+     0.8797,
+     0.5451,
+     0.0434
+    ],
+    "R_mm": 76.2,
+    "px_per_mm_at_2048": 2.33,
+    "island_px": [
+     1116,
+     89
+    ]
+   },
+   "outer_7": {
+    "kind": "cyl",
+    "real_W_mm": 647.9,
+    "real_H_mm": 41.2,
+    "z_mm": [
+     432.5,
+     462.8
+    ],
+    "squeeze_min": 0.74,
+    "rect": [
+     0.015,
+     0.9381,
+     0.7379,
+     0.0469
+    ],
+    "R_mm": 103.1,
+    "px_per_mm_at_2048": 2.33,
+    "island_px": [
+     1511,
+     96
+    ]
+   },
+   "inner_2": {
+    "kind": "cyl",
+    "real_W_mm": 644.5,
+    "real_H_mm": 60.8,
+    "z_mm": [
+     420.9,
+     463.4
+    ],
+    "squeeze_min": 0.59,
+    "rect": [
+     0.015,
+     0.2358,
+     0.7339,
+     0.0692
+    ],
+    "R_mm": 102.6,
+    "px_per_mm_at_2048": 2.33,
+    "island_px": [
+     1503,
+     142
+    ]
+   },
+   "inner_1": {
+    "kind": "cyl",
+    "real_W_mm": 379.2,
+    "real_H_mm": 68.4,
+    "z_mm": [
+     359.2,
+     420.9
+    ],
+    "squeeze_min": 0.53,
+    "rect": [
+     0.015,
+     0.32,
+     0.4318,
+     0.0779
+    ],
+    "R_mm": 60.3,
+    "px_per_mm_at_2048": 2.33,
+    "island_px": [
+     884,
+     160
+    ]
+   },
+   "inner_0": {
+    "kind": "cyl",
+    "real_W_mm": 553.0,
+    "real_H_mm": 361.4,
+    "z_mm": [
+     14.0,
+     359.2
+    ],
+    "squeeze_min": 0.29,
+    "rect": [
+     0.015,
+     0.015,
+     0.3149,
+     0.2058
+    ],
+    "R_mm": 88.0,
+    "px_per_mm_at_2048": 1.17,
+    "island_px": [
+     645,
+     421
+    ]
+   },
+   "floor": {
+    "kind": "planar",
+    "real_W_mm": 137.2,
+    "real_H_mm": 137.2,
+    "z_mm": [
+     14.0,
+     14.0
+    ],
+    "squeeze_min": null,
+    "rect": [
+     0.3449,
+     0.1426,
+     0.0781,
+     0.0781
+    ],
+    "R_mm": 68.6,
+    "px_per_mm_at_2048": 1.17,
+    "island_px": [
+     160,
+     160
+    ]
+   }
+  }
+ },
+ "bowl_maoci_12p5_v2": {
+  "name": "四季花卉碗(毛瓷碗) 分带版",
+  "objects": {
+   "bowl_maoci_12p5_v2_body": 17664
+  },
+  "tris": 17664,
+  "raw_kb": 407.609375,
+  "capacity_ml": null,
+  "islands": {
+   "base": {
+    "kind": "planar",
+    "real_W_mm": 40.0,
+    "real_H_mm": 40.0,
+    "z_mm": [
+     5.3,
+     5.3
+    ],
+    "squeeze_min": null,
+    "rect": [
+     0.787,
+     0.5212,
+     0.0494,
+     0.0494
+    ],
+    "R_mm": 20.0,
+    "px_per_mm_at_2048": 2.53,
+    "island_px": [
+     101,
+     101
+    ]
+   },
+   "outer_0": {
+    "kind": "cyl",
+    "real_W_mm": 222.1,
+    "real_H_mm": 25.7,
+    "z_mm": [
+     0.0,
+     10.6
+    ],
+    "squeeze_min": 0.57,
+    "rect": [
+     0.015,
+     0.7449,
+     0.5485,
+     0.0634
+    ],
+    "R_mm": 35.3,
+    "px_per_mm_at_2048": 5.06,
+    "island_px": [
+     1123,
+     130
+    ]
+   },
+   "outer_1": {
+    "kind": "cyl",
+    "real_W_mm": 325.1,
+    "real_H_mm": 25.6,
+    "z_mm": [
+     10.6,
+     30.1
+    ],
+    "squeeze_min": 0.68,
+    "rect": [
+     0.015,
+     0.8233,
+     0.8031,
+     0.0633
+    ],
+    "R_mm": 51.7,
+    "px_per_mm_at_2048": 5.06,
+    "island_px": [
+     1645,
+     130
+    ]
+   },
+   "outer_2": {
+    "kind": "cyl",
+    "real_W_mm": 392.7,
+    "real_H_mm": 33.8,
+    "z_mm": [
+     30.1,
+     61.2
+    ],
+    "squeeze_min": 0.83,
+    "rect": [
+     0.015,
+     0.9016,
+     0.97,
+     0.0834
+    ],
+    "R_mm": 62.5,
+    "px_per_mm_at_2048": 5.06,
+    "island_px": [
+     1987,
+     171
+    ]
+   },
+   "inner_1": {
+    "kind": "cyl",
+    "real_W_mm": 386.4,
+    "real_H_mm": 34.9,
+    "z_mm": [
+     29.4,
+     61.2
+    ],
+    "squeeze_min": 0.79,
+    "rect": [
+     0.015,
+     0.5856,
+     0.9544,
+     0.0861
+    ],
+    "R_mm": 61.5,
+    "px_per_mm_at_2048": 5.06,
+    "island_px": [
+     1955,
+     176
+    ]
+   },
+   "inner_0": {
+    "kind": "cyl",
+    "real_W_mm": 306.5,
+    "real_H_mm": 33.6,
+    "z_mm": [
+     7.5,
+     29.4
+    ],
+    "squeeze_min": 0.5,
+    "rect": [
+     0.015,
+     0.4877,
+     0.757,
+     0.0829
+    ],
+    "R_mm": 48.8,
+    "px_per_mm_at_2048": 5.06,
+    "island_px": [
+     1550,
+     170
+    ]
+   },
+   "floor": {
+    "kind": "planar",
+    "real_W_mm": 49.2,
+    "real_H_mm": 49.2,
+    "z_mm": [
+     7.5,
+     7.5
+    ],
+    "squeeze_min": null,
+    "rect": [
+     0.5785,
+     0.6867,
+     0.1216,
+     0.1216
+    ],
+    "R_mm": 24.6,
+    "px_per_mm_at_2048": 5.06,
+    "island_px": [
+     249,
+     249
+    ]
+   }
+  }
+ },
+ "cup_shengli_13p8": {
+  "name": "胜利杯(1958) 带盖",
+  "objects": {
+   "cup_shengli_13p8_body": 13056,
+   "cup_shengli_13p8_lid": 5376
+  },
+  "tris": 18432,
+  "raw_kb": 421.8828125,
+  "capacity_ml": 450,
+  "islands": {
+   "base": {
+    "kind": "planar",
+    "real_W_mm": 58.0,
+    "real_H_mm": 58.0,
+    "z_mm": [
+     6.5,
+     6.5
+    ],
+    "squeeze_min": null,
+    "rect": [
+     0.816,
+     0.0959,
+     0.1018,
+     0.1018
+    ],
+    "R_mm": 29.0,
+    "px_per_mm_at_2048": 3.59,
+    "island_px": [
+     208,
+     208
+    ]
+   },
+   "outer_0": {
+    "kind": "cyl",
+    "real_W_mm": 233.3,
+    "real_H_mm": 20.1,
+    "z_mm": [
+     0.0,
+     7.9
+    ],
+    "squeeze_min": 0.78,
+    "rect": [
+     0.015,
+     0.5476,
+     0.8186,
+     0.0705
+    ],
+    "R_mm": 37.1,
+    "px_per_mm_at_2048": 7.19,
+    "island_px": [
+     1677,
+     144
+    ]
+   },
+   "outer_1": {
+    "kind": "cyl",
+    "real_W_mm": 276.5,
+    "real_H_mm": 100.3,
+    "z_mm": [
+     7.9,
+     107.3
+    ],
+    "squeeze_min": 0.84,
+    "rect": [
+     0.015,
+     0.6331,
+     0.97,
+     0.3519
+    ],
+    "R_mm": 44.0,
+    "px_per_mm_at_2048": 7.19,
+    "island_px": [
+     1987,
+     721
+    ]
+   },
+   "inner_0": {
+    "kind": "cyl",
+    "real_W_mm": 269.2,
+    "real_H_mm": 99.4,
+    "z_mm": [
+     9.0,
+     107.3
+    ],
+    "squeeze_min": 0.82,
+    "rect": [
+     0.015,
+     0.0234,
+     0.4722,
+     0.1743
+    ],
+    "R_mm": 42.8,
+    "px_per_mm_at_2048": 3.59,
+    "island_px": [
+     967,
+     357
+    ]
+   },
+   "floor": {
+    "kind": "planar",
+    "real_W_mm": 69.8,
+    "real_H_mm": 69.8,
+    "z_mm": [
+     9.0,
+     9.0
+    ],
+    "squeeze_min": null,
+    "rect": [
+     0.6784,
+     0.0752,
+     0.1225,
+     0.1225
+    ],
+    "R_mm": 34.9,
+    "px_per_mm_at_2048": 3.59,
+    "island_px": [
+     251,
+     251
+    ]
+   },
+   "knob": {
+    "kind": "cyl",
+    "real_W_mm": 53.2,
+    "real_H_mm": 22.6,
+    "z_mm": [
+     16.1,
+     32.0
+    ],
+    "squeeze_min": 0.0,
+    "rect": [
+     0.3499,
+     0.4532,
+     0.1865,
+     0.0794
+    ],
+    "R_mm": 8.5,
+    "px_per_mm_at_2048": 7.19,
+    "island_px": [
+     382,
+     163
+    ]
+   },
+   "lid": {
+    "kind": "planar",
+    "real_W_mm": 91.2,
+    "real_H_mm": 91.2,
+    "z_mm": [
+     1.8,
+     16.5
+    ],
+    "squeeze_min": null,
+    "rect": [
+     0.015,
+     0.2127,
+     0.3199,
+     0.3199
+    ],
+    "R_mm": 45.6,
+    "px_per_mm_at_2048": 7.19,
+    "island_px": [
+     655,
+     655
+    ]
+   },
+   "lidunder": {
+    "kind": "planar",
+    "real_W_mm": 91.9,
+    "real_H_mm": 91.9,
+    "z_mm": [
+     -7.0,
+     12.5
+    ],
+    "squeeze_min": null,
+    "rect": [
+     0.5022,
+     0.0365,
+     0.1612,
+     0.1612
+    ],
+    "R_mm": 46.0,
+    "px_per_mm_at_2048": 3.59,
+    "island_px": [
+     330,
+     330
+    ]
+   }
+  }
+ }
+}

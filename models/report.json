@@ -1,0 +1,254 @@
+{
+ "bowl_maoci_12p5": {
+  "name": "四季花卉碗(毛瓷碗)",
+  "tris": 17664,
+  "raw_kb": 395.4296875,
+  "draco_kb": 395.4296875,
+  "height_mm": 61.2,
+  "rim_d_mm": 125.0,
+  "islands": {
+   "base": {
+    "kind": "planar",
+    "real_W_mm": 40.0,
+    "real_H_mm": 40.0,
+    "rect": [
+     0.515,
+     0.267,
+     0.273,
+     0.273
+    ],
+    "R_mm": 20.0,
+    "px_per_mm_at_2048": 13.98
+   },
+   "outer": {
+    "kind": "cyl",
+    "real_W_mm": 392.7,
+    "real_H_mm": 85.0,
+    "rect": [
+     0.03,
+     0.7664,
+     0.94,
+     0.2036
+    ],
+    "R_mm": 62.5,
+    "px_per_mm_at_2048": 4.9
+   },
+   "inner": {
+    "kind": "cyl",
+    "real_W_mm": 386.4,
+    "real_H_mm": 68.4,
+    "rect": [
+     0.03,
+     0.57,
+     0.94,
+     0.1665
+    ],
+    "R_mm": 61.5,
+    "px_per_mm_at_2048": 4.98
+   },
+   "floor": {
+    "kind": "planar",
+    "real_W_mm": 49.2,
+    "real_H_mm": 49.2,
+    "rect": [
+     0.03,
+     0.085,
+     0.455,
+     0.455
+    ],
+    "R_mm": 24.6,
+    "px_per_mm_at_2048": 18.93
+   }
+  },
+  "mm_per_uv": 417.8
+ },
+ "teacup_7p5": {
+  "name": "毛瓷茶杯/直口杯",
+  "tris": 18240,
+  "raw_kb": 407.94140625,
+  "draco_kb": 407.94140625,
+  "height_mm": 59.0,
+  "rim_d_mm": 75.6,
+  "islands": {
+   "base": {
+    "kind": "planar",
+    "real_W_mm": 32.0,
+    "real_H_mm": 32.0,
+    "rect": [
+     0.515,
+     0.1803,
+     0.2254,
+     0.2254
+    ],
+    "R_mm": 16.0,
+    "px_per_mm_at_2048": 14.43
+   },
+   "outer": {
+    "kind": "cyl",
+    "real_W_mm": 237.5,
+    "real_H_mm": 71.8,
+    "rect": [
+     0.03,
+     0.6857,
+     0.94,
+     0.2843
+    ],
+    "R_mm": 37.8,
+    "px_per_mm_at_2048": 8.11
+   },
+   "inner": {
+    "kind": "cyl",
+    "real_W_mm": 232.7,
+    "real_H_mm": 56.9,
+    "rect": [
+     0.0503,
+     0.4357,
+     0.8995,
+     0.22
+    ],
+    "R_mm": 37.0,
+    "px_per_mm_at_2048": 7.92
+   },
+   "floor": {
+    "kind": "planar",
+    "real_W_mm": 41.8,
+    "real_H_mm": 41.8,
+    "rect": [
+     0.1093,
+     0.03,
+     0.3757,
+     0.3757
+    ],
+    "R_mm": 20.9,
+    "px_per_mm_at_2048": 18.4
+   }
+  },
+  "mm_per_uv": 252.7
+ },
+ "plate_zheyan_22p3": {
+  "name": "折沿盘",
+  "tris": 15744,
+  "raw_kb": 353.921875,
+  "draco_kb": 353.921875,
+  "height_mm": 38.7,
+  "rim_d_mm": 223.0,
+  "islands": {
+   "base": {
+    "kind": "planar",
+    "real_W_mm": 104.0,
+    "real_H_mm": 104.0,
+    "rect": [
+     0.515,
+     0.4491,
+     0.273,
+     0.273
+    ],
+    "R_mm": 52.0,
+    "px_per_mm_at_2048": 5.38
+   },
+   "outer": {
+    "kind": "cyl",
+    "real_W_mm": 706.9,
+    "real_H_mm": 80.0,
+    "rect": [
+     0.03,
+     0.8637,
+     0.94,
+     0.1063
+    ],
+    "R_mm": 112.5,
+    "px_per_mm_at_2048": 2.72
+   },
+   "inner": {
+    "kind": "cyl",
+    "real_W_mm": 706.6,
+    "real_H_mm": 61.3,
+    "rect": [
+     0.03,
+     0.7521,
+     0.94,
+     0.0816
+    ],
+    "R_mm": 112.5,
+    "px_per_mm_at_2048": 2.72
+   },
+   "floor": {
+    "kind": "planar",
+    "real_W_mm": 126.7,
+    "real_H_mm": 126.7,
+    "rect": [
+     0.03,
+     0.2671,
+     0.455,
+     0.455
+    ],
+    "R_mm": 63.4,
+    "px_per_mm_at_2048": 7.35
+   }
+  },
+  "mm_per_uv": 752.0
+ },
+ "vase_piekou_30p3": {
+  "name": "撇口长颈瓶(故宫款)",
+  "tris": 19776,
+  "raw_kb": 441.203125,
+  "draco_kb": 441.203125,
+  "height_mm": 305.6,
+  "rim_d_mm": 63.0,
+  "islands": {
+   "base": {
+    "kind": "planar",
+    "real_W_mm": 53.0,
+    "real_H_mm": 53.0,
+    "rect": [
+     0.515,
+     0.094,
+     0.096,
+     0.096
+    ],
+    "R_mm": 26.5,
+    "px_per_mm_at_2048": 3.71
+   },
+   "outer": {
+    "kind": "cyl",
+    "real_W_mm": 455.7,
+    "real_H_mm": 346.7,
+    "rect": [
+     0.1714,
+     0.47,
+     0.6572,
+     0.5
+    ],
+    "R_mm": 72.5,
+    "px_per_mm_at_2048": 2.95
+   },
+   "inner": {
+    "kind": "cyl",
+    "real_W_mm": 433.7,
+    "real_H_mm": 320.9,
+    "rect": [
+     0.3513,
+     0.22,
+     0.2973,
+     0.22
+    ],
+    "R_mm": 69.0,
+    "px_per_mm_at_2048": 1.4
+   },
+   "floor": {
+    "kind": "planar",
+    "real_W_mm": 73.7,
+    "real_H_mm": 73.7,
+    "rect": [
+     0.325,
+     0.03,
+     0.16,
+     0.16
+    ],
+    "R_mm": 36.8,
+    "px_per_mm_at_2048": 4.45
+   }
+  },
+  "mm_per_uv": 693.4
+ }
+}

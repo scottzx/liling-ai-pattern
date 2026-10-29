@@ -1,0 +1,62 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>醴陵釉下五彩 · 3D 预览</title>
+<style>body{margin:0;font-family:sans-serif;background:#f3efe8}#ui{position:fixed;top:10px;left:10px;background:#fffc;padding:10px;border-radius:8px;z-index:2}button{margin:2px}canvas{display:block}</style>
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script>
+</head><body>
+<div id="ui"><b>器型</b><br>
+<button data-m="vase_fengweizun_46_v3">扁豆双禽瓶</button><button data-m="bowl_maoci_12p5_v3">毛瓷碗</button><button data-m="cup_shengli_13p8_v3">胜利杯</button><br>
+<b>贴图</b><br><button id="pat">纹样(占位)</button><button id="chk">棋盘格</button><button id="lid">开/合盖</button><br><select id="lib"></select><br><b>工艺校验</b><br><button id="qc">运行校验</button><button id="hl">原图/违规高亮</button><div id="qcr" style="max-width:300px;font-size:13px"></div></div>
+<script type="module">
+import * as THREE from 'three';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
+import {MeshoptDecoder} from 'three/addons/libs/meshopt_decoder.module.js';
+import {Baker,addPatternCoords} from './bake.js';
+const R=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});R.setPixelRatio(devicePixelRatio);R.setSize(innerWidth,innerHeight);
+R.toneMapping=THREE.ACESFilmicToneMapping;R.outputColorSpace=THREE.SRGBColorSpace;document.body.appendChild(R.domElement);
+const S=new THREE.Scene();S.background=new THREE.Color(0xf3efe8);
+S.environment=new THREE.PMREMGenerator(R).fromScene(new RoomEnvironment(),0.04).texture;
+const cam=new THREE.PerspectiveCamera(35,innerWidth/innerHeight,0.001,50);const ctl=new OrbitControls(cam,R.domElement);ctl.enableDamping=true;
+const dl=new THREE.DirectionalLight(0xffffff,1.2);dl.position.set(2,3,2);S.add(dl);
+const SZ=2048;const PAL=['#B8323A','#2F6FA8','#4E8C4A','#E8C84A','#2A2A2A','#7A5A9A'];
+// 占位矩形纹样（之后换成纹样库图片）
+function placeholder(){const c=document.createElement('canvas');c.width=2048;c.height=1024;const g=c.getContext('2d');
+ const fl=(x,y,s,col)=>{g.save();g.translate(x,y);for(let i=0;i<5;i++){g.rotate(Math.PI*2/5);g.beginPath();g.ellipse(0,s*.55,s*.28,s*.5,0,0,7);g.fillStyle=col;g.fill();g.lineWidth=s*.06;g.strokeStyle='#fff';g.stroke()}g.beginPath();g.arc(0,0,s*.22,0,7);g.fillStyle='#E8C84A';g.fill();g.restore()};
+ g.fillStyle=PAL[1];g.fillRect(0,40,2048,24);g.fillRect(0,960,2048,24);for(let i=0;i<6;i++)fl(2048*(i+.5)/6,512+(i%2?120:-120),220,PAL[i%3?0:2]);
+ const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;t.wrapS=THREE.RepeatWrapping;return t}
+function checker(){const c=document.createElement('canvas');c.width=c.height=1024;const g=c.getContext('2d');for(let i=0;i<32;i++)for(let j=0;j<32;j++){g.fillStyle=(i+j)%2?'#333':'#ddd';g.fillRect(i*32,j*32,32,32)}
+ g.fillStyle='#B8323A';g.font='bold 200px sans-serif';g.fillText('醴',400,560);const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;return t}
+const baker=new Baker(R,SZ);let PATS={pat:placeholder(),chk:checker()};
+const loader=new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);let cur,curId,lidNode,lidOpen=false,mode='pat',meshes=[];
+const BAND={cup_shengli_13p8_v3:[0.08,0.92],bowl_maoci_12p5_v3:[0.1,0.9],vase_fengweizun_46_v3:[0.22,0.55]};
+// 主带宽高比 -> 从2:1纹样图中间裁一条（胜利杯≈2.87:1，瓶≈7.3:1）
+const ASPECT={cup_shengli_13p8_v3:2.87,vase_fengweizun_46_v3:7.3,bowl_maoci_12p5_v3:6};
+function cropFor(id){const h=2/ASPECT[id];return [0.5-h/2,0.5+h/2]}
+let hlTex=null,hlOn=false,curUrl=null;
+async function setPattern(url){curUrl=url;hlOn=false;hlTex=null;qcr.innerHTML='';PATS.lib=await new THREE.TextureLoader().loadAsync(url);PATS.lib.colorSpace=THREE.SRGBColorSpace;PATS.lib.wrapS=THREE.RepeatWrapping;PATS.lib.anisotropy=8;mode='lib';rebake()}
+window.setPattern=setPattern;
+function rebake(){const t=baker.bake(meshes,{pattern:hlOn&&hlTex?hlTex:PATS[mode],band:mode==='chk'?[0,1]:BAND[curId],tiles:mode==='chk'?4:1,crop:mode==='lib'&&!hlOn?cropFor(curId):[0,1]});
+ for(const m of meshes)m.material.map=/base|floor|under/.test(m.userData.slot)?null:t,m.material.needsUpdate=true}
+function mat(name){const rough=/base/.test(name);return new THREE.MeshPhysicalMaterial({color:0xffffff,roughness:rough?0.6:0.12,ior:1.52,clearcoat:rough?0:0.3,clearcoatRoughness:0.05,side:THREE.DoubleSide})}
+async function load(id){curId=id;const gl=await loader.loadAsync('models/'+id+'_meshopt.glb');if(cur)S.remove(cur);cur=gl.scene;lidNode=null;meshes=[];
+ cur.traverse(o=>{if(o.isMesh){o.userData.slot=o.material.name||'';o.material=mat(o.userData.slot);meshes.push(o)}if(/_lid$/.test(o.name))lidNode=o});
+ const outer=meshes.filter(m=>/outer/.test(m.userData.slot));outer.forEach(addPatternCoords);meshes.filter(m=>!/outer/.test(m.userData.slot)).forEach(addPatternCoords);
+ S.add(cur);rebake();
+ const b=new THREE.Box3().setFromObject(cur),c=b.getCenter(new THREE.Vector3()),sz=b.getSize(new THREE.Vector3()).length();
+ ctl.target.copy(c);cam.position.copy(c).add(new THREE.Vector3(0,sz*.45,sz*2.1));ctl.update();lidOpen=false;window.__ready=id;if(mode==='lib'&&PATS.lib)rebake()}
+window.__atlas=()=>{const px=new Uint8Array(SZ*SZ*4);R.readRenderTargetPixels(baker.rt,0,0,SZ,SZ,px);return Array.from(px)};
+document.querySelectorAll('[data-m]').forEach(b=>b.onclick=()=>load(b.dataset.m));
+pat.onclick=()=>{mode='pat';rebake()};chk.onclick=()=>{mode='chk';rebake()};
+lid.onclick=()=>{if(!lidNode)return;lidOpen=!lidOpen;lidNode.position.y+=lidOpen?0.05:-0.05};
+fetch('patterns/index.json').then(r=>r.json()).then(d=>{for(const it of d.items){const o=document.createElement('option');o.value=it.id;o.textContent=it.theme+' '+it.id;lib.appendChild(o)}});
+import('./check.js').then(async C=>{const pal=await C.loadPalette('patterns/palette.json');
+ window.runQC=async()=>{if(!curUrl)return;const img=new Image();img.src=curUrl;await img.decode();const r=C.check(img,pal,cropFor(curId));
+  qcr.innerHTML=`<p style="font-weight:bold;color:${r.pass?'#2a7a3a':'#c0202a'}">${r.pass?'✔ 校验通过，可进入分色导出':'✘ 校验未通过，已在器身高亮违规区域'}</p>`+r.items.map(i=>`<div>${i.pass?'✔':'✘'} <b>${i.rule}</b>：${i.detail}</div>`).join('');
+  hlTex=new THREE.CanvasTexture(r.highlight);hlTex.colorSpace=THREE.SRGBColorSpace;hlTex.wrapS=THREE.RepeatWrapping;hlOn=!r.pass;rebake();window.__qc=r;return r};
+ qc.onclick=()=>runQC();hl.onclick=()=>{if(hlTex){hlOn=!hlOn;rebake()}};window.__qcReady=1;});
+lib.onchange=()=>setPattern('patterns/final/'+lib.value+'.png');
+const q=new URLSearchParams(location.search);if(q.get('mode'))mode=q.get('mode');await load(q.get('m')||'cup_shengli_13p8_v3');if(q.get('p'))await setPattern('patterns/final/'+q.get('p')+'.png');window.__done=1;
+addEventListener('resize',()=>{cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix();R.setSize(innerWidth,innerHeight)});
+(function a(){requestAnimationFrame(a);ctl.update();R.render(S,cam)})();
+</script></body></html>
