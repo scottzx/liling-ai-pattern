@@ -10,10 +10,10 @@ export const ASPECT={cup_shengli_13p8_v3:2.87,vase_fengweizun_46_v3:7.3,bowl_mao
 export const cropFor=id=>{const h=2/ASPECT[id];return [0.5-h/2,0.5+h/2]};
 export class Viewer{
   constructor(el){this.el=el;const R=this.R=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});R.setPixelRatio(Math.min(devicePixelRatio,2));
-    R.toneMapping=THREE.LinearToneMapping;R.toneMappingExposure=1.0;R.outputColorSpace=THREE.SRGBColorSpace;el.appendChild(R.domElement);
+    R.toneMapping=THREE.LinearToneMapping;R.toneMappingExposure=0.92;R.outputColorSpace=THREE.SRGBColorSpace;el.appendChild(R.domElement);
     const S=this.S=new THREE.Scene();S.background=new THREE.Color(0xf6f2ea);S.environment=new THREE.PMREMGenerator(R).fromScene(new RoomEnvironment(),0.04).texture;
     this.cam=new THREE.PerspectiveCamera(35,1,0.001,50);this.ctl=new OrbitControls(this.cam,R.domElement);this.ctl.enableDamping=true;this.ctl.autoRotateSpeed=1.5;
-    S.environmentIntensity=1.1;S.add(new THREE.HemisphereLight(0xffffff,0xf3ede4,1.3));[[-2,3,2],[2,3,2],[2,3,-2],[-2,3,-2]].forEach(p=>{const l=new THREE.DirectionalLight(0xffffff,0.45);l.position.set(...p);S.add(l)});
+    S.environmentIntensity=0.85;S.add(new THREE.HemisphereLight(0xffffff,0xf3ede4,0.85));[[-2,3,2],[2,3,2],[2,3,-2],[-2,3,-2]].forEach(p=>{const l=new THREE.DirectionalLight(0xffffff,0.35);l.position.set(...p);S.add(l)});
     this.ctl.autoRotate=true;let to;this.ctl.addEventListener('start',()=>{this.ctl.autoRotate=false;clearTimeout(to)});this.ctl.addEventListener('end',()=>{clearTimeout(to);to=setTimeout(()=>this.ctl.autoRotate=true,4000)});
     {const c=document.createElement('canvas');c.width=c.height=128;const g=c.getContext('2d'),gr=g.createRadialGradient(64,64,0,64,64,64);gr.addColorStop(0,'rgba(60,45,30,0.45)');gr.addColorStop(0.5,'rgba(60,45,30,0.15)');gr.addColorStop(1,'rgba(60,45,30,0)');g.fillStyle=gr;g.fillRect(0,0,128,128);
      this.shadow=new THREE.Mesh(new THREE.PlaneGeometry(1,1),new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(c),transparent:true,depthWrite:false}));this.shadow.rotation.x=-Math.PI/2;S.add(this.shadow)}
